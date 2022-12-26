@@ -142,6 +142,41 @@ p {
 }
 
 
+/* TOOLBAR */
+
+#toolbar {
+	left: 50%;
+	bottom: 1em;
+	display: flex;
+	padding: 0.25em;
+	position: fixed;
+	column-gap: 0.25em;
+	border-radius: 0.5em;
+	transform: translateX(-50%);
+	background-color: rgba(34,34,34,0.6);
+}
+
+#toolbar .toolbar-item-group {
+	display: flex;
+	overflow: hidden;
+	border-radius: 0.3em;
+}
+
+#toolbar .toolbar-item-group .toolbar-item {
+	color: #eee;
+	cursor: pointer;
+	font-size: 0.6em;
+	font-weight: 600;
+	font-family: "Figtree";
+	background-color: #111;
+	padding: 1em 1.2em;
+}
+
+#toolbar .toolbar-item-group .toolbar-item:not(:last-child) {
+	border-right: 2px solid #222;
+}
+
+
 /* FOOTER */
 
 #footer {
