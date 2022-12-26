@@ -27,10 +27,24 @@ p {
 }
 
 #page_hero {
-	font-size: 5em;
 	text-align: center;
 }
 
+#hero_heading {
+	font-size: 5em;
+}
+
+#hero_pronounciation {
+	color: #ccc;
+	font-size: 1.2em;
+	margin-bottom: 0.5em;
+	letter-spacing: 0.5em;
+}
+
+#hero_pronounciation small {
+	font-size: 0.7em;
+	font-weight: 600;
+}
 
 /* NAVBAR */
 
