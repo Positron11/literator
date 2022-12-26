@@ -1,0 +1,147 @@
+/* GLOBAL */
+
+html, 
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	color: #333;
+	font-size: 24px;
+	font-weight: 400;
+	font-family: "EB Garamond", serif;
+}
+
+p {
+	line-height: 1.6em;
+}
+
+
+/* PAGE */
+
+#page {
+	margin: auto;
+	width: 1200px;
+	padding: 4em 0;
+	position: relative;
+}
+
+#page_hero {
+	font-size: 5em;
+	text-align: center;
+}
+
+
+/* NAVBAR */
+
+#navbar {
+	top: -1px;
+	z-index: 1;
+	display: flex;
+	position: sticky;
+	padding: 1em 0 2.5em 0;
+	background-color: white;
+	justify-content: space-between;
+	border-bottom: 1px solid #eee;
+	transition: padding 0.2s ease, box-shadow 0.2s ease;
+}
+
+#navbar_hero {
+	width: 0%;
+	opacity: 0;
+	font-size: 2em;
+	overflow: hidden;
+	transition: width 0.2s ease, opacity 0.2s ease;
+}
+
+#navbar_buttons {
+	width: 100%;
+	display: flex;
+	column-gap: 2em;
+	align-items: center;
+	justify-content: center;
+	transition: width 0.2s ease, font-size 0.2s ease;
+}
+#navbar_buttons .navbar-button {
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 1.2em;
+	position: relative;
+}
+#navbar_buttons .navbar-button:not(:last-child)::after {
+	content: "·";
+	right: -1em;
+	position: absolute;
+}
+
+#navbar.is-sticky {
+	padding: 1em 2em;
+	border-bottom: none;
+	box-shadow: 0 15px 15px -15px rgba(0,0,0,0.1);
+}
+#navbar.is-sticky #navbar_hero {
+	width: 20%;
+	opacity: 1;
+}
+#navbar.is-sticky #navbar_buttons {
+	width: 30%;
+	font-size: 0.9em;
+}
+
+
+/* MAIN CONTENT */
+
+#main {
+	row-gap: 5em;
+	display: flex;
+	padding: 2.5em 8em;
+	flex-direction: column;
+}
+
+
+/* STORY */
+
+.story {
+	cursor: pointer;
+	padding: 3em 4em;
+	border-radius: 1em;
+	position: relative;
+	text-align: center;
+	border: 1px solid #eee;
+}
+.story:not(:last-child)::after {
+	left: 50%;
+	color: #ddd;
+	bottom: -3.8rem;
+	font-size: 2.5em;
+	content: "· · ·";
+	position: absolute;
+	transform: translateX(-50%);
+}
+
+.story .title {
+	font-size: 3em;
+	font-weight: 500;
+	margin-bottom: 2rem;
+	padding-bottom: 1.8rem;
+	border-bottom: 1px solid #eee;
+}
+
+
+/* FOOTER */
+
+#footer {
+	padding: 1.5em 2.5em;
+	border-top: 1px solid #eee;
+}
+
+#footer_hero {
+	font-size: 2em;
+	text-align: center;
+}
+
+#footer_content {
+	font-size: 0.8em;
+	margin-top: 0.5em;
+	text-align: center;
+}
