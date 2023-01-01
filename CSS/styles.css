@@ -100,7 +100,7 @@ a {
 	transition: inherit;
 }
 #navbar.is-sticky #navbar_buttons {
-	width: 28%;
+	width: 14em;
 	transform: translateY(0);
 }
 
