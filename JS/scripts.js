@@ -24,7 +24,7 @@ sidebarContent.addEventListener("scroll", () => {
 // navbar height
 function resizeSidebar() {
 	stopAtMainEnd = Math.max(0, window.innerHeight - main.getBoundingClientRect().bottom);
-	distanceFromTop = window.innerHeight - (sidebar.getBoundingClientRect().top + 60);
+	distanceFromTop = window.innerHeight - (navbar.getBoundingClientRect().bottom + 120);
 	sidebar.style.maxHeight = String(distanceFromTop - stopAtMainEnd) + "px";
 }
 
