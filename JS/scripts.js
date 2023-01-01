@@ -1,4 +1,5 @@
 // elements
+const main = document.getElementById("main")
 const navbar = document.getElementById("navbar")
 const sidebar = document.getElementById("sidebar")
 const sidebarContent = document.getElementById("sidebar_content")
@@ -21,7 +22,13 @@ sidebarContent.addEventListener("scroll", () => {
 });
 
 // navbar height
-function resizeSidebar() {sidebar.style.maxHeight = String(window.innerHeight - (sidebar.getBoundingClientRect().top + 60)) + "px";}
+function resizeSidebar() {
+	stopAtMainEnd = Math.max(0, window.innerHeight - main.getBoundingClientRect().bottom);
+	distanceFromTop = window.innerHeight - (sidebar.getBoundingClientRect().top + 60);
+	sidebar.style.maxHeight = String(distanceFromTop - stopAtMainEnd) + "px";
+}
 
 // sidebar scroll indicator
-function sidebarScrollIndicatorDisplay() {sidebarContent.classList.toggle("fully-scrolled", (sidebarContent.scrollHeight - sidebarContent.scrollTop) < sidebarContent.clientHeight + 5);}
+function sidebarScrollIndicatorDisplay() {
+	sidebarContent.classList.toggle("fully-scrolled", (sidebarContent.scrollHeight - sidebarContent.scrollTop) < sidebarContent.clientHeight + 5);
+}
