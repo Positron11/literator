@@ -210,15 +210,24 @@ p + p {
 	display: flex;
 	cursor: pointer;
 	font-weight: 500;
+	position: relative;
 	padding: 0.8em 0.9em;
 	border-radius:  0 0.5em 0.5em 0;
 	font-family: 'Figtree', sans-serif;
 	background-color: var(--dark-background);
-	border-bottom: 2px solid var(--dark-border);
 	transition: 0.15s ease;
 }
 #toolbar .toolbar-button:active {
 	background-color: #1f1f1f;
+}
+#toolbar .toolbar-button:not(:last-child):after {
+	left: 0;
+	bottom: 0;
+	content: "";
+	height: 2px;
+	width: 2.57em;
+	position: absolute;
+	background-color: var(--dark-border);
 }
 
 #toolbar .toolbar-button span {
