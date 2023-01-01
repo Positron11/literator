@@ -277,7 +277,7 @@ p + p {
 
 #footer {
 	padding: 1.5em 2.5em;
-	border-top: 1px solid var(--light-background);
+	border-top: 1px solid var(--light-border);
 }
 
 #footer_hero {
