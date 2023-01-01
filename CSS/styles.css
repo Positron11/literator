@@ -31,9 +31,12 @@ a {
 	padding: 3em 0;
 }
 
+
+/* PAGE HERO */
+
 #page_hero {
 	text-align: center;
-	margin-bottom: -0.4em;
+	margin-bottom: 0em;
 }
 
 #hero_heading {
@@ -43,10 +46,9 @@ a {
 #hero_pronounciation {
 	color: #eee;
 	font-size: 1.2em;
-	margin-bottom: 0.5em;
+	margin-bottom: 0.2em;
 	letter-spacing: 0.5em;
 }
-
 #hero_pronounciation small {
 	font-size: 0.7em;
 	font-weight: 600;
@@ -58,16 +60,17 @@ a {
 	top: -1px;
 	z-index: 1;
 	display: flex;
+	height: 110px;
+	padding: 0 2em;
 	position: sticky;
-	padding: 1em 0 2em 0;
+	align-items: center;
 	background-color: white;
 	justify-content: space-between;
 	border-bottom: 1px solid #eee;
-	transition: padding 0.2s ease, box-shadow 0.2s ease;
+	transition: 0.2s ease;
 }
 #navbar.is-sticky {
-	padding: 1em 2em;
-	border-bottom: none;
+	border-bottom: 1px solid transparent;
 	box-shadow: 0 15px 15px -15px rgba(0,0,0,0.1);
 }
 
@@ -76,7 +79,7 @@ a {
 	opacity: 0;
 	font-size: 2em;
 	overflow: hidden;
-	transition: width 0.2s ease, opacity 0.2s ease;
+	transition: inherit;
 }
 #navbar.is-sticky #navbar_hero {
 	width: 20%;
@@ -89,10 +92,12 @@ a {
 	column-gap: 2em;
 	align-items: center;
 	justify-content: center;
-	transition: width 0.2s ease, font-size 0.2s ease;
+	transform: translateY(-0.6em);
+	transition: inherit;
 }
 #navbar.is-sticky #navbar_buttons {
 	width: 28%;
+	transform: translateY(0);
 }
 
 #navbar_buttons .navbar-button {
@@ -105,8 +110,8 @@ a {
 	font-size: 0.9em;
 }
 #navbar_buttons .navbar-button:not(:last-child)::after {
-	content: "·";
 	right: -1em;
+	content: "·";
 	position: absolute;
 }
 
@@ -116,10 +121,13 @@ a {
 
 #main {
 	display: flex;
-	padding: 2.5em;
 	column-gap: 2em;
+	padding: 2.5em 3em;
 	position: relative;
 }
+
+
+/* SIDEBAR */
 
 #sidebar {
 	top: 7em;
@@ -138,15 +146,20 @@ a {
 	font-size: 2em;
 	font-weight: 500;
 }
+
 #sidebar_content {
 	overflow: hidden;
 }
+
+
+/* MAIN CONTENT */
 
 #main_content {
 	display: flex;
 	row-gap: 2em;
 	flex-direction: column;
 }
+
 
 /* STORY */
 
@@ -204,7 +217,6 @@ a {
 #toolbar .toolbar-item-group .toolbar-item:active {
 	background-color: #2c2c2c;
 }
-
 #toolbar .toolbar-item-group .toolbar-item:not(:last-child) {
 	border-right: 2px solid #222;
 }

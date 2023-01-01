@@ -10,11 +10,7 @@ const stickyObserver = new IntersectionObserver(([e]) => e.target.classList.togg
 stickyObserver.observe(navbar)
 
 // event listeners
-window.addEventListener("scroll", () => {
-	resizeSidebar();
-});
+window.addEventListener("scroll", () => {resizeSidebar();});
 
-// navbar height function
-function resizeSidebar() {
-	sidebar.style.maxHeight = String(window.innerHeight - (sidebar.getBoundingClientRect().top + 160)) + "px";
-}
+// navbar height
+function resizeSidebar() {sidebar.style.maxHeight = String(window.innerHeight - (sidebar.getBoundingClientRect().top + 160)) + "px";}
