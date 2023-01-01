@@ -17,6 +17,12 @@ window.addEventListener("scroll", () => {
 	resizeSidebar();
 	sidebarScrollIndicatorDisplay();
 });
+
+window.addEventListener("resize", () => {
+	resizeSidebar();
+	sidebarScrollIndicatorDisplay();
+});
+
 sidebarContent.addEventListener("scroll", () => {
 	sidebarScrollIndicatorDisplay();
 });
