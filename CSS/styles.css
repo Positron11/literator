@@ -65,7 +65,7 @@ a {
 	z-index: 1;
 	display: flex;
 	height: 110px;
-	padding: 0 2em;
+	padding: 0 3em;
 	position: sticky;
 	align-items: center;
 	background-color: white;
@@ -81,13 +81,17 @@ a {
 #navbar_hero {
 	width: 0%;
 	opacity: 0;
-	font-size: 2em;
+	color: #eee;
+	font-size: 1.8em;
 	overflow: hidden;
 	transition: inherit;
+	padding: 0.1em 0.3em;
+	border-radius: 0.2em;
+	background-color: #111;
 }
 #navbar.is-sticky #navbar_hero {
-	width: 20%;
 	opacity: 1;
+	width: 3.5em;
 }
 
 #navbar_buttons {
