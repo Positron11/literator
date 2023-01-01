@@ -14,7 +14,11 @@ body {
 }
 
 p {
+	margin: 0;
 	line-height: 1.6em;
+}
+p + p {
+	margin-top: 24px;
 }
 
 a {
@@ -131,24 +135,43 @@ a {
 
 #sidebar {
 	top: 7em;
-	color: #eee;
 	display: flex;
-	flex: 0 0 200px;
+	color: #eee;
+	flex: 0 0 320px;
 	position: sticky;
-	padding: 2em 2.5em;
 	border-radius: 0.7em;
-	flex-direction: column;
 	align-self: flex-start;
+	flex-direction: column;
+	box-sizing: border-box;
 	background-color: #111;
+	padding: 2em 2.5em 0em 2.5em;
 }
 
 #sidebar_heading {
 	font-size: 2em;
 	font-weight: 500;
+	margin-bottom: 0.5em;
 }
 
 #sidebar_content {
-	overflow: hidden;
+	overflow: auto;
+	scrollbar-width: none;
+}
+#sidebar_content::-webkit-scrollbar {
+	display: none;
+}
+
+#sidebar_scroll_indicator {
+	opacity: 0;
+	margin: auto;
+	width: 0.75em;
+	display: block;
+	padding: 1em 0;
+	transition: 0.1s ease;
+	animation: bounce 2s ease infinite;
+}
+#sidebar_content:not(.fully-scrolled) + #sidebar_scroll_indicator {
+	opacity: 1;
 }
 
 
@@ -177,6 +200,7 @@ a {
 .story.preview .title {
 	font-size: 2em;
 	font-weight: 500;
+	margin-bottom: 0.5em;
 }
 
 
@@ -185,7 +209,7 @@ a {
 #toolbar {
 	left: 50%;
 	display: flex;
-	bottom: 0.75em;
+	bottom: 0.5em;
 	padding: 0.25em;
 	position: fixed;
 	font-size: 1.1em;
@@ -238,4 +262,13 @@ a {
 	font-size: 0.8em;
 	margin-top: 0.5em;
 	text-align: center;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translate(-50%, 0);}
+	40% {transform: translate(-50%, -0.4em);}
+	60% {transform: translate(-50%, -0.3em);}
 }
