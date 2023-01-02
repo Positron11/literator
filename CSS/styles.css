@@ -193,7 +193,6 @@ p + p {
 	align-items: flex-start;
 	border-left: 2px solid #222;
 }
-
 #toolbar::after {
 	top: 0;
 	left: 0;
@@ -211,6 +210,7 @@ p + p {
 	cursor: pointer;
 	font-weight: 500;
 	position: relative;
+	align-items: center;
 	padding: 0.8em 0.9em;
 	border-radius:  0 0.5em 0.5em 0;
 	font-family: 'Figtree', sans-serif;
@@ -230,16 +230,23 @@ p + p {
 	background-color: var(--dark-border);
 }
 
-#toolbar .toolbar-button span {
-	font-size: 0.7em;
-	letter-spacing: 0.05em;
+#toolbar .sidebar-toolbar-button-icon {
+	width: 0.7em;
 }
-#toolbar .toolbar-button span.hidden-text {
+
+#toolbar .toolbar-button .hidden-text {
 	opacity: 0;
 	max-width: 0;
+	box-sizing: border-box;
 	transition: 0.2s ease;
 }
-#toolbar .toolbar-button:hover span.hidden-text {
+#toolbar .toolbar-button .hidden-text span {
+	display: block;
+	font-size: 0.7em;
+	margin-left: 0.8em;
+	letter-spacing: 0.05em;
+}
+#toolbar .toolbar-button:hover .hidden-text {
 	opacity: 1;
 	max-width: 3.6em;
 }
