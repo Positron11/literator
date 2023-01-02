@@ -215,7 +215,6 @@ p + p {
 	border-radius:  0 0.5em 0.5em 0;
 	font-family: 'Figtree', sans-serif;
 	background-color: var(--dark-background);
-	transition: 0.15s ease;
 }
 #sidebar_toolbar .toolbar-button:active {
 	background-color: #1f1f1f;
