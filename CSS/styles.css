@@ -36,8 +36,8 @@ p + p {
 
 #page {
 	margin: auto;
-	width: 1200px;
-	padding: 3em 0;
+	padding: 3em;
+	max-width: 1200px;
 }
 
 
