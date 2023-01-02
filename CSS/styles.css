@@ -183,7 +183,7 @@ p + p {
 
 /* SIDEBAR TOOLBAR */
 
-#toolbar {
+#sidebar_toolbar {
 	top: 0;
 	left: 100%;
 	display: flex;
@@ -193,7 +193,7 @@ p + p {
 	align-items: flex-start;
 	border-left: 2px solid #222;
 }
-#toolbar::after {
+#sidebar_toolbar::after {
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -205,7 +205,7 @@ p + p {
 	background-color: var(--dark-background);
 }
 
-#toolbar .toolbar-button {
+#sidebar_toolbar .toolbar-button {
 	display: flex;
 	cursor: pointer;
 	font-weight: 500;
@@ -217,10 +217,10 @@ p + p {
 	background-color: var(--dark-background);
 	transition: 0.15s ease;
 }
-#toolbar .toolbar-button:active {
+#sidebar_toolbar .toolbar-button:active {
 	background-color: #1f1f1f;
 }
-#toolbar .toolbar-button:not(:last-child):after {
+#sidebar_toolbar .toolbar-button:not(:last-child):after {
 	left: 0;
 	bottom: 0;
 	content: "";
@@ -230,23 +230,23 @@ p + p {
 	background-color: var(--dark-border);
 }
 
-#toolbar .sidebar-toolbar-button-icon {
+#sidebar_toolbar .sidebar-toolbar-button-icon {
 	width: 0.7em;
 }
 
-#toolbar .toolbar-button .hidden-text {
+#sidebar_toolbar .toolbar-button .hidden-text {
 	opacity: 0;
 	max-width: 0;
 	box-sizing: border-box;
 	transition: 0.2s ease;
 }
-#toolbar .toolbar-button .hidden-text span {
+#sidebar_toolbar .toolbar-button .hidden-text span {
 	display: block;
 	font-size: 0.7em;
 	margin-left: 0.8em;
 	letter-spacing: 0.05em;
 }
-#toolbar .toolbar-button:hover .hidden-text {
+#sidebar_toolbar .toolbar-button:hover .hidden-text {
 	opacity: 1;
 	max-width: 3.6em;
 }
