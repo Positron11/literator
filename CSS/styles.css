@@ -82,6 +82,8 @@ p + p {
 	box-shadow: 0 15px 15px -15px rgba(0,0,0,0.1);
 }
 
+/* Navbar Hero */
+
 #navbar_hero_wrapper {
 	width: 0%;
 	opacity: 0;
@@ -91,6 +93,7 @@ p + p {
 	opacity: 1;
 	width: 7.5em;
 }
+
 #navbar_hero {
 	font-size: 1.8em;
 	padding: 0.1em 0.3em;
@@ -98,6 +101,8 @@ p + p {
 	color: var(--light-gray);
 	background-color: var(--dark-background);
 }
+
+/* Navbar Buttons */
 
 #navbar_buttons {
 	width: 100%;
@@ -160,6 +165,8 @@ p + p {
 	margin-bottom: 0.5em;
 }
 
+/* Sidebar Content */
+
 #sidebar_content {
 	overflow-y: auto;
 	scrollbar-width: none;
@@ -180,8 +187,7 @@ p + p {
 	opacity: 1;
 }
 
-
-/* SIDEBAR TOOLBAR */
+/* Sidebar Toolbar */
 
 #sidebar_toolbar {
 	top: 0;
@@ -260,7 +266,7 @@ p + p {
 }
 
 
-/* STORY */
+/* STORIES */
 
 .story {
 	padding: 2em 2.5em;
