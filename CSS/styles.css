@@ -230,7 +230,7 @@ p + p {
 	background-color: var(--dark-border);
 }
 
-#sidebar_toolbar .sidebar-toolbar-button-icon {
+#sidebar_toolbar .toolbar-button-icon {
 	width: 0.7em;
 }
 
