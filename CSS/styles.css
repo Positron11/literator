@@ -146,7 +146,7 @@ p + p {
 
 /* SIDEBAR */
 
-#sidebar {
+#bulletin {
 	top: 7em;
 	display: flex;
 	position: sticky;
@@ -159,7 +159,7 @@ p + p {
 	background-color: var(--dark-background);
 }
 
-#sidebar_heading {
+#bulletin_heading {
 	font-size: 2em;
 	font-weight: 500;
 	margin-bottom: 0.5em;
@@ -167,15 +167,15 @@ p + p {
 
 /* Sidebar Content */
 
-#sidebar_content {
+#bulletin_content {
 	overflow-y: auto;
 	scrollbar-width: none;
 }
-#sidebar_content::-webkit-scrollbar {
+#bulletin_content::-webkit-scrollbar {
 	display: none;
 }
 
-#sidebar_scroll_indicator {
+#bulletin_scroll_indicator {
 	opacity: 0;
 	margin: auto;
 	width: 0.8em;
@@ -183,13 +183,13 @@ p + p {
 	transition: 0.1s ease;
 	animation: bounce 2s ease infinite;
 }
-#sidebar_content:not(.fully-scrolled) + #sidebar_scroll_indicator {
+#bulletin_content:not(.fully-scrolled) + #bulletin_scroll_indicator {
 	opacity: 1;
 }
 
-/* Sidebar Toolbar */
+/* TOOLBAR */
 
-#sidebar_toolbar {
+#toolbar {
 	top: 0;
 	left: 100%;
 	display: flex;
@@ -199,7 +199,7 @@ p + p {
 	align-items: flex-start;
 	border-left: 2px solid #222;
 }
-#sidebar_toolbar::after {
+#toolbar::after {
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -211,7 +211,7 @@ p + p {
 	background-color: var(--dark-background);
 }
 
-#sidebar_toolbar .toolbar-button {
+#toolbar .toolbar-button {
 	display: flex;
 	cursor: pointer;
 	font-weight: 500;
@@ -222,10 +222,10 @@ p + p {
 	font-family: 'Figtree', sans-serif;
 	background-color: var(--dark-background);
 }
-#sidebar_toolbar .toolbar-button:active {
+#toolbar .toolbar-button:active {
 	background-color: #1f1f1f;
 }
-#sidebar_toolbar .toolbar-button:not(:last-child):after {
+#toolbar .toolbar-button:not(:last-child):after {
 	left: 0;
 	bottom: 0;
 	content: "";
@@ -235,23 +235,23 @@ p + p {
 	background-color: var(--dark-border);
 }
 
-#sidebar_toolbar .toolbar-button-icon {
+#toolbar .toolbar-button-icon {
 	width: 0.7em;
 }
 
-#sidebar_toolbar .toolbar-button .hidden-text {
+#toolbar .toolbar-button .hidden-text {
 	opacity: 0;
 	max-width: 0;
 	box-sizing: border-box;
 	transition: 0.2s ease;
 }
-#sidebar_toolbar .toolbar-button .hidden-text span {
+#toolbar .toolbar-button .hidden-text span {
 	display: block;
 	font-size: 0.7em;
 	margin-left: 0.8em;
 	letter-spacing: 0.05em;
 }
-#sidebar_toolbar .toolbar-button:hover .hidden-text {
+#toolbar .toolbar-button:hover .hidden-text {
 	opacity: 1;
 	max-width: 3.6em;
 }

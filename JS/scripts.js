@@ -1,40 +1,46 @@
 // elements
-const main = document.getElementById("main")
-const navbar = document.getElementById("navbar")
-const sidebar = document.getElementById("sidebar")
-const sidebarContent = document.getElementById("sidebar_content")
+const page = document.getElementById("page");
+const main = document.getElementById("main");
+
+const navbar = document.getElementById("navbar");
+
+const bulletin = document.getElementById("bulletin");
+const bulletinContent = document.getElementById("bulletin_content");
+
 
 // initialization
-resizeSidebar();
-sidebarScrollIndicatorDisplay();
+commonHandlers();
+
+
+// window event listeners
+window.addEventListener("scroll", () => {
+	commonHandlers();
+}); window.addEventListener("resize", () => {
+	commonHandlers();
+});
 
 // navbar sticky control
 const stickyObserver = new IntersectionObserver(([e]) => e.target.classList.toggle('is-sticky', e.intersectionRatio < 1), {threshold: [1]});
-stickyObserver.observe(navbar)
+stickyObserver.observe(navbar);
 
-// event listeners
-window.addEventListener("scroll", () => {
-	resizeSidebar();
-	sidebarScrollIndicatorDisplay();
-});
+// bulletin scroll event listeners
+bulletinContent.addEventListener("scroll", () => {bulletinScrollStatus(bulletinContent);});
 
-window.addEventListener("resize", () => {
-	resizeSidebar();
-	sidebarScrollIndicatorDisplay();
-});
 
-sidebarContent.addEventListener("scroll", () => {
-	sidebarScrollIndicatorDisplay();
-});
-
-// navbar height
-function resizeSidebar() {
+// dynamic bulletin height
+function resizeBulletin() {
 	stopAtMainEnd = Math.max(0, window.innerHeight - main.getBoundingClientRect().bottom);
 	distanceFromTop = window.innerHeight - (navbar.getBoundingClientRect().bottom + 120);
-	sidebar.style.maxHeight = String(distanceFromTop - stopAtMainEnd) + "px";
+	bulletin.style.maxHeight = String(distanceFromTop - stopAtMainEnd) + "px";
 }
 
 // sidebar scroll indicator
-function sidebarScrollIndicatorDisplay() {
-	sidebarContent.classList.toggle("fully-scrolled", (sidebarContent.scrollHeight - sidebarContent.scrollTop) < sidebarContent.clientHeight + 5);
+function bulletinScrollStatus() {
+	bulletinContent.classList.toggle("fully-scrolled", (bulletinContent.scrollHeight - bulletinContent.scrollTop) < bulletinContent.clientHeight + 5);
+}
+
+// combine common handlers
+function commonHandlers() {
+	resizeBulletin();
+	bulletinScrollStatus();
 }
