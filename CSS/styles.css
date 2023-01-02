@@ -36,7 +36,7 @@ p + p {
 
 #page {
 	margin: auto;
-	padding: 3em;
+	padding: 3em 5em;
 	max-width: 1200px;
 }
 
@@ -144,18 +144,18 @@ p + p {
 }
 
 
-/* SIDEBAR */
+/* BULLETIN */
+
+#bulletin_container,
+#bulletin_wrapper {
+	display: flex;
+}
 
 #bulletin {
-	top: 7em;
 	display: flex;
-	position: sticky;
-	flex: 0 0 13.3em;
 	flex-direction: column;
 	box-sizing: border-box;
 	color: var(--light-gray);
-	padding: 2em 2.5em 0 2.5em;
-	border-radius: 0.7em 0 0.7em 0.7em;
 	background-color: var(--dark-background);
 }
 
@@ -164,8 +164,6 @@ p + p {
 	font-weight: 500;
 	margin-bottom: 0.5em;
 }
-
-/* Sidebar Content */
 
 #bulletin_content {
 	overflow-y: auto;
@@ -179,7 +177,6 @@ p + p {
 	opacity: 0;
 	margin: auto;
 	width: 0.8em;
-	padding: 1.3em 0;
 	transition: 0.1s ease;
 	animation: bounce 2s ease infinite;
 }
@@ -187,28 +184,12 @@ p + p {
 	opacity: 1;
 }
 
+
 /* TOOLBAR */
 
 #toolbar {
-	top: 0;
-	left: 100%;
 	display: flex;
 	user-select: none;
-	position: absolute;
-	flex-direction: column;
-	align-items: flex-start;
-	border-left: 2px solid #222;
-}
-#toolbar::after {
-	top: 0;
-	left: 0;
-	bottom: 0;
-	content: "";
-	z-index: -1;
-	width: 2.57em;
-	position: absolute;
-	border-radius:  0 0.5em 0.5em 0;
-	background-color: var(--dark-background);
 }
 
 #toolbar .toolbar-button {
@@ -216,27 +197,17 @@ p + p {
 	cursor: pointer;
 	font-weight: 500;
 	position: relative;
-	align-items: center;
 	padding: 0.8em 0.9em;
-	border-radius:  0 0.5em 0.5em 0;
+	color: var(--light-gray);
 	font-family: 'Figtree', sans-serif;
 	background-color: var(--dark-background);
 }
 #toolbar .toolbar-button:active {
 	background-color: #1f1f1f;
 }
-#toolbar .toolbar-button:not(:last-child):after {
-	left: 0;
-	bottom: 0;
-	content: "";
-	height: 2px;
-	width: 2.57em;
-	position: absolute;
-	background-color: var(--dark-border);
-}
 
 #toolbar .toolbar-button-icon {
-	width: 0.7em;
+	width: 0.75em;
 }
 
 #toolbar .toolbar-button .hidden-text {
@@ -250,10 +221,6 @@ p + p {
 	font-size: 0.7em;
 	margin-left: 0.8em;
 	letter-spacing: 0.05em;
-}
-#toolbar .toolbar-button:hover .hidden-text {
-	opacity: 1;
-	max-width: 3.6em;
 }
 
 
@@ -301,6 +268,125 @@ p + p {
 	font-size: 0.8em;
 	margin-top: 0.5em;
 	text-align: center;
+}
+
+
+/* BREAKPOINTTS */
+
+/* Desktop Viewports */
+
+@media only screen and (min-width: 1251px) {
+	#bulletin_container {
+		top: 7em;
+		flex: 0 0 13.3em;
+		position: sticky;
+		align-self: flex-start;
+	}
+
+	#bulletin {
+		min-height: 350px;
+		padding: 2em 2.5em 0 2.5em;
+		border-radius: 0.7em 0 0.7em 0.7em;
+	}
+
+	#bulletin_scroll_indicator {
+		padding: 1.3em 0;
+	}
+
+	#toolbar {
+		top: 0;
+		left: 100%;
+		position: absolute;
+		flex-direction: column;
+		align-items: flex-start;
+		border-left: 2px solid #222;
+	}
+	
+	#toolbar::after {
+		left: 0;
+		top: 0.5em;
+		content: "";
+		z-index: -1;
+		bottom: 0.5em;
+		width: 2.55em;
+		position: absolute;
+		background-color: var(--dark-background);
+	}
+
+	#toolbar .toolbar-button {
+		border-radius: 0 0.5em 0.5em 0;
+	}
+	#toolbar .toolbar-button:not(:last-child):after {
+		left: 0;
+		bottom: 0;
+		content: "";
+		height: 2px;
+		width: 2.55em;
+		position: absolute;
+		background-color: var(--dark-border);
+	}
+	#toolbar .toolbar-button:hover .hidden-text {
+		opacity: 1;
+		max-width: 3.6em;
+	}
+
+	#mobile_bulletin_button {
+		display: none !important;
+	}
+}
+
+/* Tablet Viewports */
+
+@media only screen and (max-width: 1250px) {
+	#page {
+		padding: 3em 3em;
+	}
+
+	#main {
+		column-gap: 0;
+	}
+
+	#bulletin_wrapper {
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		display: flex;
+		position: fixed;
+		align-items: center;
+		justify-content: center;
+		backdrop-filter: blur(8px);
+		transition: 0.15s ease;
+	}
+	#bulletin_wrapper:not(.show) {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	#bulletin {
+		max-width: 500px;
+		max-height: 70vh;
+		border-radius: 0.7em;
+		padding: 3em 3.5em 0 3.5em;
+	}
+
+	#bulletin_scroll_indicator {
+		padding: 1.8em 0;
+	}
+
+	#toolbar {
+		left: 50%;
+		bottom: 0.5em;
+		position: fixed;
+		overflow: hidden;
+		border-radius: 0.5em;
+		transform: translateX(-50%);;
+	}
+
+	#toolbar .toolbar-button:not(:last-child) {
+		border-right: 2px solid var(--dark-border);
+	}
 }
 
 

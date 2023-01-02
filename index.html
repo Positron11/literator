@@ -67,27 +67,35 @@
 		<!-- Main content -->
 		<div id="main">
 			<!-- Announcements and such -->
-			<div id="bulletin">
-				<!-- Header -->
-				<div id="bulletin_header">
-					<div id="bulletin_heading">Savoir</div>
+			<div id="bulletin_container">
+				<div id="bulletin_wrapper">
+					<div id="bulletin">
+						<!-- Header -->
+						<div id="bulletin_header">
+							<div id="bulletin_heading">Savoir</div>
+						</div>
+						
+						<!-- Content -->
+						<div id="bulletin_content">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							<p>Provident dolorem, sed explicabo alias velit fugiat sapiente aperiam, nisi quaerat doloremque deleniti! Suscipit officia vitae eligendi voluptatibus perferendis exercitationem rem libero?</p>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolorem, sed explicabo alias velit fugiat sapiente aperiam, nisi quaerat doloremque deleniti! Suscipit officia vitae eligendi voluptatibus perferendis exercitationem rem libero?</p>
+						</div>
+						
+						<!-- Scroll indicator icon -->
+						<img id="bulletin_scroll_indicator" src="Assets/Images/Icons/down.svg" alt="Scroll Down">
+					</div>	
 				</div>
-				
-				<!-- Content -->
-				<div id="bulletin_content">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					<p>Provident dolorem, sed explicabo alias velit fugiat sapiente aperiam, nisi quaerat doloremque deleniti! Suscipit officia vitae eligendi voluptatibus perferendis exercitationem rem libero?</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolorem, sed explicabo alias velit fugiat sapiente aperiam, nisi quaerat doloremque deleniti! Suscipit officia vitae eligendi voluptatibus perferendis exercitationem rem libero?</p>
-				</div>
-				
-				<!-- Scroll indicator icon -->
-				<img id="bulletin_scroll_indicator" src="Assets/Images/Icons/down.svg" alt="Scroll Down">
-				
-				<!-- Sidebar toolbar -->
+
+				<!-- Toolbar -->
 				<div id="toolbar">
 					<div class="toolbar-button">
 						<img class="toolbar-button-icon" src="Assets/Images/Icons/top.svg" alt="Scroll Top">
 						<div class="hidden-text"><span>Top.</span></div>
+					</div>
+
+					<div id="mobile_bulletin_button" class="toolbar-button">
+						<img class="toolbar-button-icon" src="Assets/Images/Icons/loudspeaker.svg" alt="Updates">
 					</div>
 					
 					<div class="toolbar-button">
@@ -105,7 +113,7 @@
 						<div class="hidden-text"><span>New.</span></div>
 					</div>
 				</div>
-			</div>
+			</div>	
 			
 			<!-- Story previews -->
 			<div id="main_content">
