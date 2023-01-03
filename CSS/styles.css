@@ -90,7 +90,7 @@ p + p {
 	justify-content: space-between;
 	background-color: var(--light-background);
 	border-bottom: 1px solid var(--light-border);
-	transition: 0.2s ease;
+	transition: box-shadow 0.2s ease;
 }
 @media only screen and (max-width: 1000px) {#navbar {
 	padding: 0 2em;
@@ -105,7 +105,7 @@ p + p {
 #navbar_hero_wrapper {
 	width: 0%;
 	opacity: 0;
-	transition: 0.2s ease;
+	transition: width 0.2s ease, opacity 0.2s ease;
 }
 @media only screen and (max-width: 1000px) {#navbar_hero_wrapper {
 	font-size: 0.8em;
@@ -132,7 +132,7 @@ p + p {
 	align-items: center;
 	justify-content: center;
 	transform: translateY(-0.6em);
-	transition: 0.2s ease;
+	transition: width 0.2s ease, transform 0.2s ease;
 }
 @media only screen and (max-width: 1000px) {#navbar_buttons {
 	font-size: 0.9em;
@@ -205,7 +205,7 @@ p + p {
 	align-items: center;
 	justify-content: center;
 	backdrop-filter: blur(8px);
-	transition: 0.15s ease;
+	transition: opacity 0.15s ease;
 }}
 @media only screen and (max-width: 1450px) {#bulletin_wrapper:not(.show) {
 	opacity: 0;
@@ -249,7 +249,7 @@ p + p {
 	opacity: 0;
 	margin: auto;
 	width: 0.8em;
-	transition: 0.1s ease;
+	transition: opacity 0.1s ease;
 	animation: bounce 2s ease infinite;
 }
 #bulletin_content:not(.fully-scrolled) + #bulletin_scroll_indicator {
@@ -321,10 +321,6 @@ p + p {
 	position: absolute;
 	background-color: var(--dark-border);
 }}
-@media only screen and (min-width: 1451px) and (pointer: fine) {#toolbar .toolbar-button:hover .hidden-text {
-	opacity: 1;
-	max-width: 3.6em;
-}}
 @media only screen and (max-width: 1450px) {#toolbar .toolbar-button:not(:last-child) {
 	border-right: 2px solid var(--dark-border);
 }}
@@ -337,8 +333,12 @@ p + p {
 	opacity: 0;
 	max-width: 0;
 	box-sizing: border-box;
-	transition: 0.2s ease;
+	transition: opacity 0.2s ease, max-width 0.2s ease;
 }
+@media only screen and (min-width: 1451px) and (pointer: fine) {#toolbar .toolbar-button:hover .hidden-text {
+	opacity: 1;
+	max-width: 3.6em;
+}}
 #toolbar .toolbar-button .hidden-text span {
 	display: block;
 	font-size: 0.7em;
