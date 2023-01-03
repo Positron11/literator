@@ -179,7 +179,7 @@ img {
 	border-radius: 0.3em;
 	transform: translate(50%, -60%);
 	background-color: var(--dark-background);
-	transition: right 0.2s ease, transform 0.2s ease, opacity 0.1s ease;
+	transition: right 0.2s ease, transform 0.2s ease, filter 0.15s ease;
 }
 @media only screen and (min-width: calc(700px + 1px)) {#mobile_navbar_menu_button {
 	display: none;
@@ -192,7 +192,7 @@ img {
 	transform: translateY(-50%);
 }
 #navbar.menu-open #mobile_navbar_menu_button {
-	opacity: 0.1;
+	filter: invert();
 }
 
 #mobile_navbar_menu_button img {
