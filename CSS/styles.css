@@ -131,7 +131,7 @@ img {
 	flex-direction: column;
 }}
 @media only screen and (max-width: 700px) {#navbar:not(.is-sticky) {
-	row-gap: 0.7em;
+	row-gap: 0.9em;
 }}
 #navbar.is-sticky {
 	border-bottom: 1px solid transparent;
@@ -225,8 +225,7 @@ img {
 	font-size: 0.95em;
 }}
 @media only screen and (max-width: 700px) {#navbar_menu {
-	row-gap: 1em;
-	margin-left: 0.5em;
+	row-gap: 0.6em;
 	flex-direction: column;
 }}
 @media only screen and (max-width: 700px) {#navbar:not(.is-sticky) #navbar_menu {
@@ -238,12 +237,20 @@ img {
 }}
 
 #navbar_menu .navbar-button {
-	font-size: 1.1em;
-	font-weight: 500;
 	position: relative;
 }
-@media only screen and (min-width: calc(700px + 1px)) {#navbar.is-sticky .navbar-button {
-	font-size: 0.95em;
+@media only screen and (max-width: 700px) {#navbar_menu .navbar-button {
+	display: flex;
+	align-items: center;
+	padding-right: 0.7em;
+	border-radius: 0.3em;
+	font-family: 'Figtree', sans-serif;
+}}
+@media only screen and (max-width: 700px) {#navbar:not(.is-sticky) #navbar_menu .navbar-button {
+	background-color: #eee;
+}}
+@media only screen and (max-width: 700px) {#navbar.is-sticky #navbar_menu .navbar-button {
+	column-gap: 0.7em;
 }}
 @media only screen and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-button:not(:last-child)::after {
 	right: -1em;
@@ -253,8 +260,27 @@ img {
 @media only screen and (max-width: 1000px) and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-button:not(:last-child)::after {
 	right: -0.7em;
 }}
-@media only screen and (max-width: 700px) {#navbar_menu .navbar-button {
-	font-size: 0.9em;
+
+#navbar_menu .navbar-button .navbar-button-icon {
+	height: 0.9em;
+	padding: 0.6em;
+	filter: invert();
+	border-radius: 0.3em;
+	background-color: var(--dark-background);
+}
+@media only screen and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-button .navbar-button-icon {
+	display: none;
+}}
+
+#navbar_menu .navbar-button span {
+	font-size: 1.1em;
+	font-weight: 500;
+}
+@media only screen and (min-width: calc(700px + 1px)) {#navbar.is-sticky .navbar-button span {
+	font-size: 0.95em;
+}}
+@media only screen and (max-width: 700px) {#navbar_menu .navbar-button span {
+	font-size: 0.8em;
 }}
 
 
