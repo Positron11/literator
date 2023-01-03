@@ -47,7 +47,7 @@ function freezeTransitions(element) {
 
 // dynamic bulletin height
 function resizeBulletin() {
-	if (window.innerWidth > 1250) {
+	if (window.innerWidth > 1450) {
 		stopAtMainEnd = Math.max(0, window.innerHeight - main.getBoundingClientRect().bottom);
 		distanceFromTop = window.innerHeight - (navbar.getBoundingClientRect().bottom + 120);
 		bulletin.style.maxHeight = String(distanceFromTop - stopAtMainEnd) + "px";

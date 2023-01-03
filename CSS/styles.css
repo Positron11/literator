@@ -138,9 +138,7 @@ p + p {
 
 #main {
 	display: flex;
-	column-gap: 2em;
 	padding: 2.5em 3em;
-	flex-direction: row-reverse;
 }
 
 
@@ -273,9 +271,14 @@ p + p {
 
 /* BREAKPOINTTS */
 
-/* Desktop Viewports */
+/* Desktop Viewports only */
 
-@media only screen and (min-width: 1251px) {
+@media only screen and (min-width: 1451px) {
+	#main {
+		column-gap: 2em;
+		flex-direction: row-reverse;
+	}
+
 	#bulletin_container {
 		top: 7em;
 		flex: 0 0 13.3em;
@@ -335,15 +338,11 @@ p + p {
 	}
 }
 
-/* Tablet Viewports */
+/* Tablet Viewports and below */
 
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1450px) {
 	#page {
-		padding: 3em 3em;
-	}
-
-	#main {
-		column-gap: 0;
+		padding: 3em;
 	}
 
 	#bulletin_wrapper {
@@ -386,6 +385,47 @@ p + p {
 
 	#toolbar .toolbar-button:not(:last-child) {
 		border-right: 2px solid var(--dark-border);
+	}
+
+	.story.preview {
+		text-align: center;
+	}
+}
+
+/* Small Tablet Viewports and below */
+
+@media only screen and (max-width: 1000px) {
+	#page {
+		padding: 3em 2em;
+	}
+
+	#page_hero {
+		font-size: 0.8em;
+	}
+
+	#navbar {
+		padding: 0 2em;
+	}
+	
+	#navbar_hero_wrapper {
+		font-size: 0.8em;
+	}
+	
+	#navbar_buttons {
+		font-size: 0.9em;
+		column-gap: 1.3em;
+	}
+	#navbar.is-sticky #navbar_buttons {
+		width: 11em;
+		font-size: 0.95em;
+	}
+
+	#navbar_buttons .navbar-button:not(:last-child)::after {
+		right: -0.7em;
+	}
+
+	#main {
+		padding: 2.5em 2em;
 	}
 }
 
