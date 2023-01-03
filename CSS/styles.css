@@ -244,7 +244,7 @@ img {
 	align-items: center;
 	padding-right: 0.7em;
 	border-radius: 0.3em;
-	font-family: 'Figtree', sans-serif;
+	font-family: 'Jost', sans-serif;
 }}
 @media only screen and (max-width: 700px) {#navbar:not(.is-sticky) #navbar_menu .navbar-button {
 	background-color: #eee;
@@ -272,10 +272,10 @@ img {
 	display: none;
 }}
 
-#navbar_menu .navbar-button span {
+@media only screen and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-button span {
 	font-size: 1.1em;
 	font-weight: 500;
-}
+}}
 @media only screen and (min-width: calc(700px + 1px)) {#navbar.is-sticky .navbar-button span {
 	font-size: 0.95em;
 }}
@@ -433,11 +433,10 @@ img {
 
 #toolbar .toolbar-button {
 	display: flex;
-	font-weight: 500;
 	position: relative;
 	padding: 0.8em 0.9em;
 	color: var(--light-gray);
-	font-family: 'Figtree', sans-serif;
+	font-family: 'Jost', sans-serif;
 	background-color: var(--dark-background);
 }
 #toolbar .toolbar-button:active {
