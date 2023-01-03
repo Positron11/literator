@@ -111,7 +111,7 @@ p + p {
 /* Navbar Hero */
 
 #navbar_hero_wrapper {
-	width: 0%;
+	width: 0;
 	opacity: 0;
 	transition: width 0.2s ease, opacity 0.2s ease;
 }
