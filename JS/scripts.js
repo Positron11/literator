@@ -3,6 +3,7 @@ const page = document.getElementById("page");
 const main = document.getElementById("main");
 
 const navbar = document.getElementById("navbar");
+const mobileNavbarMenuButton = document.getElementById("mobile_navbar_menu_button");
 
 const bulletin = document.getElementById("bulletin");
 const bulletinWrapper = document.getElementById("bulletin_wrapper");
@@ -31,6 +32,10 @@ window.addEventListener("resize", () => {
 
 // bulletin scroll event listeners
 bulletinContent.addEventListener("scroll", () => {bulletinScrollStatus(bulletinContent);});
+
+
+// toggle mobile navbar menu
+mobileNavbarMenuButton.addEventListener("click", () => {navbar.classList.toggle("menu-open");});
 
 
 // toggle mobile bulletin
