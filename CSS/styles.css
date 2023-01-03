@@ -105,7 +105,7 @@ p + p {
 #navbar_hero_wrapper {
 	width: 0%;
 	opacity: 0;
-	transition: inherit;
+	transition: 0.2s ease;
 }
 @media only screen and (max-width: 1000px) {#navbar_hero_wrapper {
 	font-size: 0.8em;
@@ -132,7 +132,7 @@ p + p {
 	align-items: center;
 	justify-content: center;
 	transform: translateY(-0.6em);
-	transition: inherit;
+	transition: 0.2s ease;
 }
 @media only screen and (max-width: 1000px) {#navbar_buttons {
 	font-size: 0.9em;
