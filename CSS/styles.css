@@ -172,7 +172,7 @@ p + p {
 	display: flex;
 	padding: 2.5em 3em;
 }
-@media only screen and (min-width: 1451px) {#main {
+@media only screen and (min-width: calc(1450px + 1px)) {#main {
 	column-gap: 2em;
 	flex-direction: row-reverse;
 }}
@@ -187,7 +187,7 @@ p + p {
 #bulletin_wrapper {
 	display: flex;
 }
-@media only screen and (min-width: 1451px) {#bulletin_container {
+@media only screen and (min-width: calc(1450px + 1px)) {#bulletin_container {
 	top: 7em;
 	flex: 0 0 13.3em;
 	position: sticky;
@@ -219,7 +219,7 @@ p + p {
 	color: var(--light-gray);
 	background-color: var(--dark-background);
 }
-@media only screen and (min-width: 1451px) {#bulletin {
+@media only screen and (min-width: calc(1450px + 1px)) {#bulletin {
 	min-height: 350px;
 	padding: 2em 2.5em 0 2.5em;
 	border-radius: 0.7em 0 0.7em 0.7em;
@@ -255,7 +255,7 @@ p + p {
 #bulletin_content:not(.fully-scrolled) + #bulletin_scroll_indicator {
 	opacity: 1;
 }
-@media only screen and (min-width: 1451px) {#bulletin_scroll_indicator {
+@media only screen and (min-width: calc(1450px + 1px)) {#bulletin_scroll_indicator {
 	padding: 1.3em 0;
 }}
 @media only screen and (max-width: 1450px) {#bulletin_scroll_indicator {
@@ -269,7 +269,7 @@ p + p {
 	display: flex;
 	user-select: none;
 }
-@media only screen and (min-width: 1451px) {#toolbar {
+@media only screen and (min-width: calc(1450px + 1px)) {#toolbar {
 	top: 0;
 	left: 100%;
 	position: absolute;
@@ -277,7 +277,7 @@ p + p {
 	align-items: flex-start;
 	border-left: 2px solid #222;
 }}
-@media only screen and (min-width: 1451px) {#toolbar::after {
+@media only screen and (min-width: calc(1450px + 1px)) {#toolbar::after {
 	left: 0;
 	top: 0.5em;
 	content: "";
@@ -309,10 +309,10 @@ p + p {
 #toolbar .toolbar-button:active {
 	background-color: #1f1f1f;
 }
-@media only screen and (min-width: 1451px) {#toolbar .toolbar-button {
+@media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button {
 	border-radius: 0 0.5em 0.5em 0;
 }}
-@media only screen and (min-width: 1451px) {#toolbar .toolbar-button:not(:last-child):after {
+@media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button:not(:last-child):after {
 	left: 0;
 	bottom: 0;
 	content: "";
@@ -335,7 +335,7 @@ p + p {
 	box-sizing: border-box;
 	transition: opacity 0.2s ease, max-width 0.2s ease;
 }
-@media only screen and (min-width: 1451px) and (pointer: fine) {#toolbar .toolbar-button:hover .hidden-text {
+@media only screen and (min-width: calc(1450px + 1px)) and (pointer: fine) {#toolbar .toolbar-button:hover .hidden-text {
 	opacity: 1;
 	max-width: 3.6em;
 }}
@@ -346,7 +346,7 @@ p + p {
 	letter-spacing: 0.05em;
 }
 
-@media only screen and (min-width: 1451px) {#mobile_bulletin_button {
+@media only screen and (min-width: calc(1450px + 1px)) {#mobile_bulletin_button {
 	display: none !important;
 }}
 
