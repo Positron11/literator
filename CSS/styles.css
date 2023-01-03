@@ -123,16 +123,16 @@ p + p {
 	transition: width 0.2s ease, opacity 0.2s ease;
 }
 @media only screen and (max-width: 1000px) {#navbar_hero_wrapper {
-	font-size: 0.8em;
+	font-size: 0.9em;
 }}
 #navbar.is-sticky #navbar_hero_wrapper {
 	opacity: 1;
-	width: 7.3em;
+	width: 7.4em;
 }
 
 #navbar_hero {
-	font-size: 1.8em;
-	padding: 0.1em 0.3em;
+	font-size: 1.6em;
+	padding: 0.3em 0.6em;
 	border-radius: 0.2em;
 	color: var(--light-gray);
 	background-color: var(--dark-background);
