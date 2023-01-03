@@ -310,6 +310,7 @@ img {
 
 #bulletin {
 	display: flex;
+	position: relative;
 	flex-direction: column;
 	box-sizing: border-box;
 	color: var(--light-gray);
@@ -359,6 +360,16 @@ img {
 }}
 @media only screen and (max-width: 1450px) {#bulletin_scroll_indicator {
 	padding: 1.8em 0;
+}}
+
+#bulletin_close_button {
+	width: 0.8em;
+	top: 1.5em;
+	right: 1.5em;
+	position: absolute;
+}
+@media only screen and (min-width: calc(1450px + 1px)) {#bulletin_close_button{
+	display: none;
 }}
 
 

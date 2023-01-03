@@ -9,6 +9,7 @@ const bulletin = document.getElementById("bulletin");
 const bulletinWrapper = document.getElementById("bulletin_wrapper");
 const bulletinContent = document.getElementById("bulletin_content");
 
+const bulletinCloseButton = document.getElementById("bulletin_close_button");
 const mobileBulletinButton = document.getElementById("mobile_bulletin_button");
 
 
@@ -40,6 +41,7 @@ mobileNavbarMenuButton.addEventListener("click", () => {navbar.classList.toggle(
 
 // toggle mobile bulletin
 mobileBulletinButton.addEventListener("click", () => {bulletinWrapper.classList.add("show");});
+bulletinCloseButton.addEventListener("click", () => {bulletinWrapper.classList.remove("show");});
 bulletinWrapper.addEventListener("click", () => {bulletinWrapper.classList.remove("show");});
 bulletin.addEventListener("click", (ev) => {ev.stopPropagation();});
 
