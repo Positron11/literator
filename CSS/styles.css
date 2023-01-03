@@ -200,6 +200,7 @@ p + p {
 	bottom: 0;
 	z-index: 1;
 	display: flex;
+	padding: 1.5em;
 	position: fixed;
 	align-items: center;
 	justify-content: center;
