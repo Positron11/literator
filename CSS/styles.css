@@ -1,10 +1,16 @@
 :root {
+	/* Colors */
 	--foreground: #111;
 	--light-background: #fff;
 	--dark-background: #111;
 	--light-border: #eee;
 	--dark-border: #222;
 	--light-gray: #eee;
+
+	/* Breakpoints */
+	--desktop-breakpoint: 1450px;
+	--large-tablet-breakpoint: 1000px;
+	--small-tablet-breakpoint: 700px;
 }
 
 
@@ -39,6 +45,12 @@ p + p {
 	padding: 3em 5em;
 	max-width: 1200px;
 }
+@media only screen and (max-width: 1450px) {#page {
+	padding: 3em;
+}}
+@media only screen and (max-width: 1000px) {#page {
+	padding: 3em 2em;
+}}
 
 
 /* PAGE HERO */
@@ -46,6 +58,9 @@ p + p {
 #page_hero {
 	text-align: center;
 }
+@media only screen and (max-width: 1000px) {#page_hero {
+	font-size: 0.8em;
+}}
 
 #hero_heading {
 	font-size: 4em;
@@ -77,6 +92,9 @@ p + p {
 	border-bottom: 1px solid var(--light-border);
 	transition: 0.2s ease;
 }
+@media only screen and (max-width: 1000px) {#navbar {
+	padding: 0 2em;
+}}
 #navbar.is-sticky {
 	border-bottom: 1px solid transparent;
 	box-shadow: 0 15px 15px -15px rgba(0,0,0,0.1);
@@ -89,6 +107,9 @@ p + p {
 	opacity: 0;
 	transition: inherit;
 }
+@media only screen and (max-width: 1000px) {#navbar_hero_wrapper {
+	font-size: 0.8em;
+}}
 #navbar.is-sticky #navbar_hero_wrapper {
 	opacity: 1;
 	width: 7.3em;
@@ -113,10 +134,18 @@ p + p {
 	transform: translateY(-0.6em);
 	transition: inherit;
 }
+@media only screen and (max-width: 1000px) {#navbar_buttons {
+	font-size: 0.9em;
+	column-gap: 1.3em;
+}}
 #navbar.is-sticky #navbar_buttons {
 	width: 12em;
 	transform: none;
 }
+@media only screen and (max-width: 1000px) {#navbar.is-sticky #navbar_buttons {
+	width: 11em;
+	font-size: 0.95em;
+}}
 
 #navbar_buttons .navbar-button {
 	cursor: pointer;
@@ -132,6 +161,9 @@ p + p {
 	content: "·";
 	position: absolute;
 }
+@media only screen and (max-width: 1000px) {#navbar_buttons .navbar-button:not(:last-child)::after {
+	right: -0.7em;
+}}
 
 
 /* MAIN CONTAINER */
@@ -140,6 +172,13 @@ p + p {
 	display: flex;
 	padding: 2.5em 3em;
 }
+@media only screen and (min-width: 1451px) {#main {
+	column-gap: 2em;
+	flex-direction: row-reverse;
+}}
+@media only screen and (max-width: 1000px) {#main {
+	padding: 2.5em 2em;
+}}
 
 
 /* BULLETIN */
@@ -148,6 +187,29 @@ p + p {
 #bulletin_wrapper {
 	display: flex;
 }
+@media only screen and (min-width: 1451px) {#bulletin_container {
+	top: 7em;
+	flex: 0 0 13.3em;
+	position: sticky;
+	align-self: flex-start;
+}}
+@media only screen and (max-width: 1450px) {#bulletin_wrapper {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	display: flex;
+	position: fixed;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(8px);
+	transition: 0.15s ease;
+}}
+@media only screen and (max-width: 1450px) {#bulletin_wrapper:not(.show) {
+	opacity: 0;
+	pointer-events: none;
+}}
 
 #bulletin {
 	display: flex;
@@ -156,6 +218,17 @@ p + p {
 	color: var(--light-gray);
 	background-color: var(--dark-background);
 }
+@media only screen and (min-width: 1451px) {#bulletin {
+	min-height: 350px;
+	padding: 2em 2.5em 0 2.5em;
+	border-radius: 0.7em 0 0.7em 0.7em;
+}}
+@media only screen and (max-width: 1450px) {#bulletin {
+	max-width: 500px;
+	max-height: 75vh;
+	border-radius: 0.7em;
+	padding: 3em 3.5em 0 3.5em;
+}}
 
 #bulletin_heading {
 	font-size: 2em;
@@ -181,6 +254,12 @@ p + p {
 #bulletin_content:not(.fully-scrolled) + #bulletin_scroll_indicator {
 	opacity: 1;
 }
+@media only screen and (min-width: 1451px) {#bulletin_scroll_indicator {
+	padding: 1.3em 0;
+}}
+@media only screen and (max-width: 1450px) {#bulletin_scroll_indicator {
+	padding: 1.8em 0;
+}}
 
 
 /* TOOLBAR */
@@ -189,6 +268,32 @@ p + p {
 	display: flex;
 	user-select: none;
 }
+@media only screen and (min-width: 1451px) {#toolbar {
+	top: 0;
+	left: 100%;
+	position: absolute;
+	flex-direction: column;
+	align-items: flex-start;
+	border-left: 2px solid #222;
+}}
+@media only screen and (min-width: 1451px) {#toolbar::after {
+	left: 0;
+	top: 0.5em;
+	content: "";
+	z-index: -1;
+	bottom: 0.5em;
+	width: 2.55em;
+	position: absolute;
+	background-color: var(--dark-background);
+}}
+@media only screen and (max-width: 1450px) {#toolbar {
+	left: 50%;
+	bottom: 0.5em;
+	position: fixed;
+	overflow: hidden;
+	border-radius: 0.5em;
+	transform: translateX(-50%);;
+}}
 
 #toolbar .toolbar-button {
 	display: flex;
@@ -203,6 +308,25 @@ p + p {
 #toolbar .toolbar-button:active {
 	background-color: #1f1f1f;
 }
+@media only screen and (min-width: 1451px) {#toolbar .toolbar-button {
+	border-radius: 0 0.5em 0.5em 0;
+}}
+@media only screen and (min-width: 1451px) {#toolbar .toolbar-button:not(:last-child):after {
+	left: 0;
+	bottom: 0;
+	content: "";
+	height: 2px;
+	width: 2.55em;
+	position: absolute;
+	background-color: var(--dark-border);
+}}
+@media only screen and (min-width: 1451px) and (pointer: fine) {#toolbar .toolbar-button:hover .hidden-text {
+	opacity: 1;
+	max-width: 3.6em;
+}}
+@media only screen and (max-width: 1450px) {#toolbar .toolbar-button:not(:last-child) {
+	border-right: 2px solid var(--dark-border);
+}}
 
 #toolbar .toolbar-button-icon {
 	width: 0.75em;
@@ -220,6 +344,10 @@ p + p {
 	margin-left: 0.8em;
 	letter-spacing: 0.05em;
 }
+
+@media only screen and (min-width: 1451px) {#mobile_bulletin_button {
+	display: none !important;
+}}
 
 
 /* MAIN CONTENT */
@@ -242,6 +370,9 @@ p + p {
 .story.preview {
 	cursor: pointer;
 }
+@media only screen and (max-width: 1450px) {.story.preview {
+	text-align: center;
+}}
 
 .story.preview .title {
 	font-size: 2em;
@@ -266,167 +397,6 @@ p + p {
 	font-size: 0.8em;
 	margin-top: 0.5em;
 	text-align: center;
-}
-
-
-/* BREAKPOINTTS */
-
-/* Desktop Viewports only */
-
-@media only screen and (min-width: 1451px) {
-	#main {
-		column-gap: 2em;
-		flex-direction: row-reverse;
-	}
-
-	#bulletin_container {
-		top: 7em;
-		flex: 0 0 13.3em;
-		position: sticky;
-		align-self: flex-start;
-	}
-
-	#bulletin {
-		min-height: 350px;
-		padding: 2em 2.5em 0 2.5em;
-		border-radius: 0.7em 0 0.7em 0.7em;
-	}
-
-	#bulletin_scroll_indicator {
-		padding: 1.3em 0;
-	}
-
-	#toolbar {
-		top: 0;
-		left: 100%;
-		position: absolute;
-		flex-direction: column;
-		align-items: flex-start;
-		border-left: 2px solid #222;
-	}
-	
-	#toolbar::after {
-		left: 0;
-		top: 0.5em;
-		content: "";
-		z-index: -1;
-		bottom: 0.5em;
-		width: 2.55em;
-		position: absolute;
-		background-color: var(--dark-background);
-	}
-
-	#toolbar .toolbar-button {
-		border-radius: 0 0.5em 0.5em 0;
-	}
-	#toolbar .toolbar-button:not(:last-child):after {
-		left: 0;
-		bottom: 0;
-		content: "";
-		height: 2px;
-		width: 2.55em;
-		position: absolute;
-		background-color: var(--dark-border);
-	}
-	#toolbar .toolbar-button:hover .hidden-text {
-		opacity: 1;
-		max-width: 3.6em;
-	}
-
-	#mobile_bulletin_button {
-		display: none !important;
-	}
-}
-
-/* Tablet Viewports and below */
-
-@media only screen and (max-width: 1450px) {
-	#page {
-		padding: 3em;
-	}
-
-	#bulletin_wrapper {
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		z-index: 1;
-		display: flex;
-		position: fixed;
-		align-items: center;
-		justify-content: center;
-		backdrop-filter: blur(8px);
-		transition: 0.15s ease;
-	}
-	#bulletin_wrapper:not(.show) {
-		opacity: 0;
-		pointer-events: none;
-	}
-
-	#bulletin {
-		max-width: 500px;
-		max-height: 75vh;
-		border-radius: 0.7em;
-		padding: 3em 3.5em 0 3.5em;
-	}
-
-	#bulletin_scroll_indicator {
-		padding: 1.8em 0;
-	}
-
-	#toolbar {
-		left: 50%;
-		bottom: 0.5em;
-		position: fixed;
-		overflow: hidden;
-		border-radius: 0.5em;
-		transform: translateX(-50%);;
-	}
-
-	#toolbar .toolbar-button:not(:last-child) {
-		border-right: 2px solid var(--dark-border);
-	}
-
-	.story.preview {
-		text-align: center;
-	}
-}
-
-/* Small Tablet Viewports and below */
-
-@media only screen and (max-width: 1000px) {
-	#page {
-		padding: 3em 2em;
-	}
-
-	#page_hero {
-		font-size: 0.8em;
-	}
-
-	#navbar {
-		padding: 0 2em;
-	}
-	
-	#navbar_hero_wrapper {
-		font-size: 0.8em;
-	}
-	
-	#navbar_buttons {
-		font-size: 0.9em;
-		column-gap: 1.3em;
-	}
-	#navbar.is-sticky #navbar_buttons {
-		width: 11em;
-		font-size: 0.95em;
-	}
-
-	#navbar_buttons .navbar-button:not(:last-child)::after {
-		right: -0.7em;
-	}
-
-	#main {
-		padding: 2.5em 2em;
-	}
 }
 
 
