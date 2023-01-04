@@ -573,7 +573,9 @@ img {
 
 #footer_hero {
 	font-size: 2em;
+	font-weight: 500;
 	text-align: center;
+	font-family: "Melodrama", serif;
 }
 
 #footer_content {
