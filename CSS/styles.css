@@ -33,7 +33,7 @@ BREAKPOINT REFRENCE:
 
 @font-face {
 	font-family: "Melodrama";
-	src: url("../Assets/Fonts/Melodrama/Melodrama-Variable.woff2") format("woff2-variations");
+	src: url("../Assets/Fonts/Melodrama/melodrama_variable.woff2") format("woff2-variations");
 	font-weight: 300 700;
 	font-stretch: 0% 200%;
 	font-style: normal;
