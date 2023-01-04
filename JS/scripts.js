@@ -19,7 +19,6 @@ const mobileBulletinButton = document.getElementById("mobile_bulletin_button");
 freezeTransitions(navbar);
 // initialization
 commonHandlers();
-calculateNavbarMenuHeight();
 
 
 // navbar sticky control
@@ -30,7 +29,6 @@ stickyObserver.observe(navbar);
 window.addEventListener("scroll", () => {commonHandlers();});
 window.addEventListener("resize", () => {
 	commonHandlers();
-	calculateNavbarMenuHeight();
 	freezeTransitions(bulletinWrapper);
 });
 
@@ -39,7 +37,10 @@ bulletinContent.addEventListener("scroll", () => {bulletinScrollStatus(bulletinC
 
 
 // toggle mobile navbar menu
-mobileNavbarMenuButton.addEventListener("click", () => {navbar.classList.toggle("menu-open");});
+mobileNavbarMenuButton.addEventListener("click", () => {
+	calculateNavbarMenuHeight();
+	navbar.classList.toggle("menu-open");
+});
 
 // toggle mobile bulletin
 mobileBulletinButton.addEventListener("click", () => {bulletinWrapper.classList.add("show");});
@@ -56,7 +57,7 @@ function freezeTransitions(element) {
 
 // calculate menu wrapper content height
 function calculateNavbarMenuHeight() {
-	navbarMenuWrapper.style.setProperty("--mobile-menu-height",  String(navbarMenu.clientHeight) + "px");
+	navbarMenuWrapper.style.setProperty("--mobile-menu-height",  String(navbarMenu.offsetHeight + 1) + "px");
 }
 
 // dynamic bulletin height
