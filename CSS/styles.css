@@ -328,7 +328,7 @@ img {
 	position: fixed;
 	align-items: center;
 	justify-content: center;
-	backdrop-filter: blur(8px);
+	backdrop-filter: blur(6px);
 	transition: opacity 0.15s ease;
 }}
 @media only screen and (max-width: 1450px) {#bulletin_wrapper:not(.show) {
