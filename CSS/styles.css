@@ -25,8 +25,8 @@ BREAKPOINT REFRENCE:
 /* FONTS */
 
 @font-face {
-	font-family: "Gentium Book Plus";
-	src: url("../Assets/Fonts/Gentium/gentium_book_plus_regular.woff2") format("woff2");
+	font-family: "Gentium Plus";
+	src: url("../Assets/Fonts/Gentium/gentium_plus_regular.woff2") format("woff2");
 	font-style: normal;
 	font-weight: 400;
 }
@@ -47,6 +47,14 @@ BREAKPOINT REFRENCE:
 	font-style: normal;
 }
 
+@font-face {
+	font-family: "Karma";
+	src: url("../Assets/Fonts/Karma/karma_variable.woff2") format("woff2-variations");
+	font-weight: 300 700;
+	font-stretch: 0% 200%;
+	font-style: normal;
+}
+
 
 /* TAGS */
 
@@ -56,16 +64,16 @@ body {
 	padding: 0;
 	width: 100%;
 	height: 100%;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 400;
 	scroll-behavior: smooth;
 	color: var(--foreground);
-	font-family: "EB Garamond", serif;
+	font-family: "Karma", serif;
 }
 
 p {
 	margin: 0;
-	line-height: 1.6em;
+	line-height: 1.9em;
 }
 p + p {
 	margin-top: 24px;
@@ -87,18 +95,15 @@ img {
 
 #page {
 	margin: auto;
-	padding: 3em 5em;
+	padding: 4em;
 	max-width: 1200px;
 }
-@media only screen and (max-width: 1450px) {#page {
-	padding: 3em;
-}}
 @media only screen and (max-width: 1000px) {#page {
-	padding: 3em 2em;
+	padding: 4em 3em;
 }}
 @media only screen and (max-width: 700px) {#page {
-	font-size: 0.85em;
-	padding: 3em 1.5em;
+	font-size: 0.9em;
+	padding: 4em 1.8em;
 }}
 
 
@@ -118,16 +123,16 @@ img {
 }}
 
 #hero_heading {
-	font-size: 4em;
+	font-size: 4.8em;
 	font-family: "Melodrama", serif;
 }
 
 #hero_pronounciation {
-	font-size: 1.3em;
+	font-size: 1.5em;
 	margin-bottom: 0.2em;
 	letter-spacing: 0.2em;
 	color: var(--light-gray);
-	font-family: "Gentium Book Plus", serif;
+	font-family: "Gentium Plus", serif;
 }
 
 #hero_pronounciation span {
@@ -141,14 +146,14 @@ img {
 	top: -1px;
 	z-index: 1;
 	display: flex;
-	padding: 0 3em;
+	padding: 0 3.5em;
 	position: sticky;
 	background-color: var(--light-background);
 	border-bottom: 1px solid var(--light-border);
 	transition: box-shadow 0.2s ease;
 }
 @media only screen and (min-width: calc(700px + 1px)) {#navbar {
-	height: 4.6em;
+	height: 5.5em;
 	align-items: center;
 	justify-content: space-between;
 }}
@@ -186,12 +191,12 @@ img {
 }}
 #navbar.is-sticky #navbar_hero_wrapper {
 	opacity: 1;
-	width: 7.5em;
+	width: 9em;
 }
 
 #navbar_hero {
 	font-weight: 500;
-	font-size: 1.6em;
+	font-size: 1.9em;
 	padding: 0.3em 0.6em;
 	border-radius: 0.2em;
 	color: var(--light-gray);
@@ -202,10 +207,10 @@ img {
 #mobile_navbar_menu_button {
 	top: 50%;
 	right: 50%;
-	padding: 0.65em;
+	padding: 0.75em;
 	position: absolute;
 	border-radius: 0.3em;
-	transform: translate(50%, -60%);
+	transform: translate(50%, -63%);
 	background-color: var(--dark-background);
 	transition: right 0.2s ease, transform 0.2s ease, filter 0.15s ease;
 }
@@ -224,7 +229,7 @@ img {
 }
 
 #mobile_navbar_menu_button img {
-	width: 0.7em;
+	width: 0.8em;
 }
 
 /* Navbar Menu */
@@ -234,10 +239,10 @@ img {
 	transition: width 0.15s ease;
 }}
 @media only screen and (min-width: calc(700px + 1px)) {#navbar.is-sticky #navbar_menu_wrapper {
-	width: 12em;
+	width: 14em;
 }}
 @media only screen and (max-width: 1000px) and (min-width: calc(700px + 1px)) {#navbar.is-sticky #navbar_menu_wrapper {
-	width: 11em;
+	width: 11.5em;
 }}
 @media only screen and (max-width: 700px) {#navbar_menu_wrapper {
 	height: var(--mobile-menu-height);
@@ -269,8 +274,8 @@ img {
 	font-size: 0.95em;
 }}
 @media only screen and (max-width: 700px) {#navbar_menu {
-	row-gap: 0.6em;
-	padding-top: 1em;
+	row-gap: 0.7em;
+	padding-top: 1.2em;
 	flex-direction: column;
 }}
 @media only screen and (max-width: 700px) {#navbar:not(.is-sticky) #navbar_menu {
@@ -279,15 +284,15 @@ img {
 }}
 
 #navbar_menu .navbar-button {
+	font-weight: 450;
 	position: relative;
+	font-family: "Satoshi", serif;
 }
 @media only screen and (max-width: 700px) {#navbar_menu .navbar-button {
 	display: flex;
-	font-weight: 450;
 	align-items: center;
 	padding-right: 0.7em;
 	border-radius: 0.3em;
-	font-family: "Satoshi", sans-serif;
 }}
 @media only screen and (max-width: 700px) {#navbar:not(.is-sticky) #navbar_menu .navbar-button {
 	background-color: #eee;
@@ -305,8 +310,8 @@ img {
 }}
 
 #navbar_menu .navbar-button .navbar-button-icon {
-	height: 0.9em;
-	padding: 0.6em;
+	height: 1em;
+	padding: 0.7em;
 	filter: invert();
 	border-radius: 0.3em;
 	background-color: var(--dark-background);
@@ -315,18 +320,8 @@ img {
 	display: none;
 }}
 
-@media only screen and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-button span {
-	font-size: 1.1em;
-	font-weight: 500;
-}}
-@media only screen and (min-width: calc(700px + 1px)) {#navbar.is-sticky .navbar-button span {
-	font-size: 0.95em;
-}}
-@media only screen and (max-width: 1000px) {#navbar_menu .navbar-button span {
-	font-size: 1em;
-}}
 @media only screen and (max-width: 700px) {#navbar_menu .navbar-button span {
-	font-size: 0.8em;
+	font-size: 0.9em;
 }}
 
 
@@ -334,17 +329,17 @@ img {
 
 #main {
 	display: flex;
-	padding: 2.5em 3em;
+	padding: 3em 3.5em;
 }
 @media only screen and (min-width: calc(1450px + 1px)) {#main {
-	column-gap: 2em;
+	column-gap: 2.5em;
 	flex-direction: row-reverse;
 }}
 @media only screen and (max-width: 1000px) {#main {
-	padding: 2.5em 2em;
+	padding: 2.8em 2em;
 }}
 @media only screen and (max-width: 700px) {#main {
-	padding: 1.5em 0.5em;
+	padding: 1.7em 0.6em;
 }}
 
 
@@ -356,7 +351,7 @@ img {
 }
 @media only screen and (min-width: calc(1450px + 1px)) {#bulletin_container {
 	top: 7em;
-	flex: 0 0 13.3em;
+	flex: 0 0 16.5em;
 	position: sticky;
 	align-self: flex-start;
 }}
@@ -388,22 +383,22 @@ img {
 	background-color: var(--dark-background);
 }
 @media only screen and (min-width: calc(1450px + 1px)) {#bulletin {
-	min-height: 350px;
-	padding: 2em 2.5em 0 2.5em;
+	min-height: 17.5em;
+	padding: 2.5em 3em 0 3em;
 	border-radius: 0.7em 0 0.7em 0.7em;
 }}
 @media only screen and (max-width: 1450px) {#bulletin {
 	max-width: 500px;
 	max-height: 75vh;
 	border-radius: 0.7em;
-	padding: 3em 3.5em 0 3.5em;
+	padding: 3.5em 4em 0 4em;
 }}
 @media only screen and (max-width: 700px) {#bulletin {
 	max-height: 80vh;
 }}
 
 #bulletin_heading {
-	font-size: 2em;
+	font-size: 2.5em;
 	font-weight: 500;
 	margin-bottom: 0.5em;
 	font-family: "Melodrama", serif;
@@ -420,28 +415,28 @@ img {
 #bulletin_scroll_indicator {
 	opacity: 0;
 	margin: auto;
-	width: 0.8em;
+	width: 0.9em;
 	transition: opacity 0.1s ease;
 	animation: bounce 2s ease infinite;
 }
 #bulletin_content:not(.fully-scrolled) + #bulletin_scroll_indicator {
-	opacity: 1;
+	opacity: 0.9;
 }
 @media only screen and (min-width: calc(1450px + 1px)) {#bulletin_scroll_indicator {
-	padding: 1.3em 0;
+	padding: 1.4em 0;
 }}
 @media only screen and (max-width: 1450px) {#bulletin_scroll_indicator {
 	padding: 1.8em 0;
 }}
 
 #bulletin_close_button {
-	top: 0.5em;
-	right: 0.5em;
-	width: 0.7em;
-	padding: 1.2em;
+	top: 0.6em;
+	right: 0.6em;
+	width: 0.8em;
+	padding: 1.3em;
 	position: absolute;
 }
-@media only screen and (min-width: calc(1450px + 1px)) {#bulletin_close_button{
+@media only screen and (min-width: calc(1450px + 1px)) {#bulletin_close_button {
 	display: none;
 }}
 
@@ -466,7 +461,7 @@ img {
 	content: "";
 	z-index: -1;
 	bottom: 0.5em;
-	width: 2.55em;
+	width: 3.05em;
 	position: absolute;
 	background-color: var(--dark-background);
 }}
@@ -482,7 +477,7 @@ img {
 #toolbar .toolbar-button {
 	display: flex;
 	position: relative;
-	padding: 0.8em 0.9em;
+	padding: 1em 1.1em;
 	color: var(--light-gray);
 	background-color: var(--dark-background);
 }
@@ -497,7 +492,7 @@ img {
 	bottom: 0;
 	content: "";
 	height: 2px;
-	width: 2.55em;
+	width: 3.05em;
 	position: absolute;
 	background-color: var(--dark-border);
 }}
@@ -506,7 +501,7 @@ img {
 }}
 
 #toolbar .toolbar-button-icon {
-	width: 0.75em;
+	width: 0.85em;
 }
 
 #toolbar .toolbar-button .hidden-text {
@@ -521,7 +516,7 @@ img {
 #toolbar .toolbar-button .hidden-text span {
 	display: block;
 	font-weight: 500;
-	font-size: 0.65em;
+	font-size: 0.75em;
 	margin-left: 0.8em;
 	letter-spacing: 0.05em;
 	font-family: "Satoshi", sans-serif;
@@ -535,8 +530,8 @@ img {
 /* MAIN CONTENT */
 
 #main_content {
-	row-gap: 2em;
 	display: flex;
+	row-gap: 2.5em;
 	flex-direction: column;
 }
 
@@ -557,11 +552,14 @@ img {
 }}
 
 .story.preview .title {
-	font-size: 2em;
+	font-size: 2.5em;
 	font-weight: 500;
 	margin-bottom: 0.5em;
 	font-family: "Melodrama", serif;
 }
+@media only screen and (max-width: 500px) {.story.preview .title {
+	font-size: 2em;
+}}
 
 
 /* FOOTER */
@@ -573,7 +571,7 @@ img {
 }
 
 #footer_hero {
-	font-size: 2em;
+	font-size: 2.4em;
 	font-weight: 500;
 	text-align: center;
 	font-family: "Melodrama", serif;
@@ -581,7 +579,7 @@ img {
 
 #footer_content {
 	font-weight: 500;
-	font-size: 0.6em;
+	font-size: 0.7em;
 	margin-top: 0.5em;
 	text-align: center;
 }
