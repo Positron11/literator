@@ -214,7 +214,7 @@ img {
 }}
 @media only screen and (max-width: 1000px) and (min-width: calc(700px + 1px)) {#navbar_menu {
 	font-size: 0.9em;
-	column-gap: 1.3em;
+	column-gap: 1.6em;
 }}
 @media only screen and (min-width: calc(700px + 1px)) {#navbar.is-sticky #navbar_menu {
 	width: 12em;
@@ -258,7 +258,7 @@ img {
 	position: absolute;
 }}
 @media only screen and (max-width: 1000px) and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-button:not(:last-child)::after {
-	right: -0.7em;
+	right: -0.9em;
 }}
 
 #navbar_menu .navbar-button .navbar-button-icon {
@@ -278,6 +278,9 @@ img {
 }}
 @media only screen and (min-width: calc(700px + 1px)) {#navbar.is-sticky .navbar-button span {
 	font-size: 0.95em;
+}}
+@media only screen and (max-width: 1000px) {#navbar_menu .navbar-button span {
+	font-size: 1em;
 }}
 @media only screen and (max-width: 700px) {#navbar_menu .navbar-button span {
 	font-size: 0.8em;
