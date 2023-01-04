@@ -112,6 +112,7 @@ img {
 }}
 @media only screen and (max-width: 700px) {#page_hero {
 	font-size: 0.65em;
+	font-weight: 450;
 	margin-bottom: -0.5em;
 }}
 
