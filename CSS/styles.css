@@ -13,12 +13,38 @@ BREAKPOINT REFRENCE:
 	--dark-background: #111;
 	--light-border: #eee;
 	--dark-border: #222;
-	--light-gray: #e1e1e1;
+	--light-gray: #eaeaea;
 
 	/* Breakpoints */
 	--desktop-breakpoint: 1450px;
 	--large-tablet-breakpoint: 1000px;
 	--small-tablet-breakpoint: 700px;
+}
+
+
+/* FONTS */
+
+@font-face {
+	font-family: "Gentium Book Plus";
+	src: url("../Assets/Fonts/Gentium/gentium_book_plus_regular.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Melodrama";
+	src: url("../Assets/Fonts/Melodrama/Melodrama-Variable.woff2") format("woff2-variations");
+	font-weight: 300 700;
+	font-stretch: 0% 200%;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Satoshi";
+	src: url("../Assets/Fonts/Satoshi/satoshi_variable.woff2") format("woff2-variations");
+	font-weight: 300 900;
+	font-stretch: 0% 200%;
+	font-style: normal;
 }
 
 
@@ -91,17 +117,19 @@ img {
 
 #hero_heading {
 	font-size: 4em;
+	font-family: "Melodrama", serif;
 }
 
 #hero_pronounciation {
 	font-size: 1.3em;
 	margin-bottom: 0.2em;
-	letter-spacing: 0.4em;
+	letter-spacing: 0.2em;
 	color: var(--light-gray);
+	font-family: "Gentium Book Plus", serif;
 }
-#hero_pronounciation small {
-	font-size: 0.7em;
-	font-weight: 500;
+
+#hero_pronounciation span {
+	margin: 0 0.2em;
 }
 
 
@@ -165,6 +193,7 @@ img {
 	padding: 0.3em 0.6em;
 	border-radius: 0.2em;
 	color: var(--light-gray);
+	font-family: "Melodrama", serif;
 	background-color: var(--dark-background);
 }
 
@@ -251,10 +280,11 @@ img {
 }
 @media only screen and (max-width: 700px) {#navbar_menu .navbar-button {
 	display: flex;
+	font-weight: 450;
 	align-items: center;
 	padding-right: 0.7em;
 	border-radius: 0.3em;
-	font-family: 'Jost', sans-serif;
+	font-family: "Satoshi", sans-serif;
 }}
 @media only screen and (max-width: 700px) {#navbar:not(.is-sticky) #navbar_menu .navbar-button {
 	background-color: #eee;
@@ -373,6 +403,7 @@ img {
 	font-size: 2em;
 	font-weight: 500;
 	margin-bottom: 0.5em;
+	font-family: "Melodrama", serif;
 }
 
 #bulletin_content {
@@ -450,7 +481,6 @@ img {
 	position: relative;
 	padding: 0.8em 0.9em;
 	color: var(--light-gray);
-	font-family: 'Jost', sans-serif;
 	background-color: var(--dark-background);
 }
 #toolbar .toolbar-button:active {
@@ -479,7 +509,6 @@ img {
 #toolbar .toolbar-button .hidden-text {
 	opacity: 0;
 	max-width: 0;
-	box-sizing: border-box;
 	transition: opacity 0.2s ease, max-width 0.2s ease;
 }
 @media only screen and (min-width: calc(1450px + 1px)) and (pointer: fine) {#toolbar .toolbar-button:hover .hidden-text {
@@ -488,9 +517,11 @@ img {
 }}
 #toolbar .toolbar-button .hidden-text span {
 	display: block;
-	font-size: 0.7em;
+	font-weight: 500;
+	font-size: 0.65em;
 	margin-left: 0.8em;
 	letter-spacing: 0.05em;
+	font-family: "Satoshi", sans-serif;
 }
 
 @media only screen and (min-width: calc(1450px + 1px)) {#mobile_bulletin_button {
@@ -526,6 +557,7 @@ img {
 	font-size: 2em;
 	font-weight: 500;
 	margin-bottom: 0.5em;
+	font-family: "Melodrama", serif;
 }
 
 
