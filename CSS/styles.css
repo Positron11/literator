@@ -226,7 +226,7 @@ img {
 	transition: width 0.2s ease, transform 0.2s ease;
 }}
 @media only screen and (max-width: 1000px) and (min-width: calc(700px + 1px)) {#navbar_menu {
-	font-size: 0.9em;
+	font-size: 1em;
 	column-gap: 1.6em;
 }}
 @media only screen and (min-width: calc(700px + 1px)) {#navbar.is-sticky #navbar_menu {
