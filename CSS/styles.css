@@ -400,9 +400,10 @@ img {
 }}
 
 #bulletin_close_button {
-	width: 0.8em;
-	top: 1.5em;
-	right: 1.5em;
+	top: 0.5em;
+	right: 0.5em;
+	width: 0.7em;
+	padding: 1.2em;
 	position: absolute;
 }
 @media only screen and (min-width: calc(1450px + 1px)) {#bulletin_close_button{
