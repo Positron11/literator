@@ -1,10 +1,4 @@
-/* 
-BREAKPOINT REFRENCE: 
-- Desktop: 1450
-- Large Tablet: 1000
-- Small Tablet: 700
-*/
-
+/* VARIABLES */
 
 :root {
 	/* Colors */
@@ -14,49 +8,12 @@ BREAKPOINT REFRENCE:
 	--light-border: #eee;
 	--dark-border: #222;
 	--light-gray: #eaeaea;
-
-	/* Breakpoints */
-	--desktop-breakpoint: 1450px;
-	--large-tablet-breakpoint: 1000px;
-	--small-tablet-breakpoint: 700px;
-}
-
-
-/* FONTS */
-
-@font-face {
-	font-family: "Gentium Plus";
-	src: url("../Assets/Fonts/Gentium/gentium_plus_regular.woff2") format("woff2");
-	font-style: normal;
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: "Melodrama";
-	src: url("../Assets/Fonts/Melodrama/melodrama_variable.woff2") format("woff2-variations");
-	font-weight: 300 700;
-	font-stretch: 0% 200%;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Satoshi";
-	src: url("../Assets/Fonts/Satoshi/satoshi_variable.woff2") format("woff2-variations");
-	font-weight: 300 900;
-	font-stretch: 0% 200%;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Karma";
-	src: url("../Assets/Fonts/Karma/karma_variable.woff2") format("woff2-variations");
-	font-weight: 300 700;
-	font-stretch: 0% 200%;
-	font-style: normal;
 }
 
 
 /* TAGS */
+
+/* Body */
 
 html, 
 body {
@@ -71,6 +28,8 @@ body {
 	font-family: "Karma", serif;
 }
 
+/* Paragraphs */
+
 p {
 	margin: 0;
 	line-height: 1.9em;
@@ -78,6 +37,8 @@ p {
 p + p {
 	margin-top: 24px;
 }
+
+/* Images */
 
 img {
 	display: block;
@@ -122,10 +83,7 @@ img {
 	margin-bottom: -0.5em;
 }}
 
-#hero_heading {
-	font-size: 4.8em;
-	font-family: "Melodrama", serif;
-}
+/* Pronounciation */
 
 #hero_pronounciation {
 	font-size: 1.5em;
@@ -137,6 +95,13 @@ img {
 
 #hero_pronounciation span {
 	margin: 0 0.2em;
+}
+
+/* Heading */
+
+#hero_heading {
+	font-size: 4.8em;
+	font-family: "Melodrama", serif;
 }
 
 
@@ -204,6 +169,8 @@ img {
 	background-color: var(--dark-background);
 }
 
+/* Mobile Navbar Menu Button */
+
 #mobile_navbar_menu_button {
 	top: 50%;
 	right: 50%;
@@ -245,9 +212,9 @@ img {
 	width: 11.5em;
 }}
 @media only screen and (max-width: 700px) {#navbar_menu_wrapper {
-	height: var(--mobile-menu-height);
 	overflow: hidden;
 	transition: height 0.1s ease;
+	height: var(--mobile-menu-height);
 }}
 @media only screen and (max-width: 700px) {#navbar:not(.menu-open) #navbar_menu_wrapper {
 	height: 0;
@@ -283,6 +250,8 @@ img {
 	align-items: center;
 }}
 
+/* Navbar Menu Buttons */
+
 #navbar_menu .navbar-button {
 	font-weight: 450;
 	position: relative;
@@ -300,6 +269,13 @@ img {
 @media only screen and (max-width: 700px) {#navbar.is-sticky #navbar_menu .navbar-button {
 	column-gap: 0.7em;
 }}
+
+@media only screen and (max-width: 700px) {#navbar_menu .navbar-button span {
+	font-size: 0.9em;
+}}
+
+/* Navbar Button Separators */
+
 @media only screen and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-button:not(:last-child)::after {
 	right: -1em;
 	content: "·";
@@ -308,6 +284,8 @@ img {
 @media only screen and (max-width: 1000px) and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-button:not(:last-child)::after {
 	right: -0.9em;
 }}
+
+/* Mobile Navbar Button Icons */
 
 #navbar_menu .navbar-button .navbar-button-icon {
 	height: 1em;
@@ -318,10 +296,6 @@ img {
 }
 @media only screen and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-button .navbar-button-icon {
 	display: none;
-}}
-
-@media only screen and (max-width: 700px) {#navbar_menu .navbar-button span {
-	font-size: 0.9em;
 }}
 
 
@@ -412,6 +386,8 @@ img {
 	display: none;
 }
 
+/* Bulletin Content Scroll Indicator */
+
 #bulletin_scroll_indicator {
 	opacity: 0;
 	margin: auto;
@@ -428,6 +404,8 @@ img {
 @media only screen and (max-width: 1450px) {#bulletin_scroll_indicator {
 	padding: 1.8em 0;
 }}
+
+/* Mobile Bulletin Close Button */
 
 #bulletin_close_button {
 	top: 0.6em;
@@ -455,6 +433,17 @@ img {
 	align-items: flex-start;
 	border-left: 2px solid #222;
 }}
+@media only screen and (max-width: 1450px) {#toolbar {
+	left: 50%;
+	bottom: 0.5em;
+	position: fixed;
+	overflow: hidden;
+	border-radius: 0.5em;
+	transform: translateX(-50%);;
+}}
+
+/* Desktop Toolbar Gap-Coverer */
+
 @media only screen and (min-width: calc(1450px + 1px)) {#toolbar::after {
 	left: 0;
 	top: 0.5em;
@@ -465,14 +454,8 @@ img {
 	position: absolute;
 	background-color: var(--dark-background);
 }}
-@media only screen and (max-width: 1450px) {#toolbar {
-	left: 50%;
-	bottom: 0.5em;
-	position: fixed;
-	overflow: hidden;
-	border-radius: 0.5em;
-	transform: translateX(-50%);;
-}}
+
+/* Toolbar Buttons */
 
 #toolbar .toolbar-button {
 	display: flex;
@@ -487,6 +470,16 @@ img {
 @media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button {
 	border-radius: 0 0.5em 0.5em 0;
 }}
+@media only screen and (max-width: 1450px) {#toolbar .toolbar-button:not(:last-child) {
+	border-right: 2px solid var(--dark-border);
+}}
+
+#toolbar .toolbar-button-icon {
+	width: 0.85em;
+}
+
+/* Desktop Toolbar Button Separators */
+
 @media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button:not(:last-child):after {
 	left: 0;
 	bottom: 0;
@@ -496,13 +489,8 @@ img {
 	position: absolute;
 	background-color: var(--dark-border);
 }}
-@media only screen and (max-width: 1450px) {#toolbar .toolbar-button:not(:last-child) {
-	border-right: 2px solid var(--dark-border);
-}}
 
-#toolbar .toolbar-button-icon {
-	width: 0.85em;
-}
+/* Desktop Toolbar Hover Text */
 
 #toolbar .toolbar-button .hidden-text {
 	opacity: 0;
@@ -521,6 +509,8 @@ img {
 	letter-spacing: 0.05em;
 	font-family: "Satoshi", sans-serif;
 }
+
+/* Mobile Bulletin Button */
 
 @media only screen and (min-width: calc(1450px + 1px)) {#mobile_bulletin_button {
 	display: none !important;

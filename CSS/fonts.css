@@ -1,0 +1,32 @@
+/* FONT DEFINITONS */
+
+@font-face {
+	font-family: "Gentium Plus";
+	src: url("../Assets/Fonts/Gentium/gentium_plus_regular.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Melodrama";
+	src: url("../Assets/Fonts/Melodrama/melodrama_variable.woff2") format("woff2-variations");
+	font-weight: 300 700;
+	font-stretch: 0% 200%;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Satoshi";
+	src: url("../Assets/Fonts/Satoshi/satoshi_variable.woff2") format("woff2-variations");
+	font-weight: 300 900;
+	font-stretch: 0% 200%;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Karma";
+	src: url("../Assets/Fonts/Karma/karma_variable.woff2") format("woff2-variations");
+	font-weight: 300 700;
+	font-stretch: 0% 200%;
+	font-style: normal;
+}
