@@ -176,7 +176,7 @@ img {
 #navbar_hero_wrapper {
 	width: 0;
 	opacity: 0;
-	transition: width 0.2s ease, opacity 0.2s ease;
+	transition: width 0.15s ease, opacity 0.15s ease;
 }
 @media only screen and (max-width: 1000px) {#navbar_hero_wrapper {
 	font-size: 0.9em;
@@ -231,6 +231,7 @@ img {
 
 @media only screen and (min-width: calc(700px + 1px)) {#navbar_menu_wrapper {
 	width: 100%;
+	transition: width 0.15s ease;
 }}
 @media only screen and (min-width: calc(700px + 1px)) {#navbar.is-sticky #navbar_menu_wrapper {
 	width: 12em;
@@ -255,7 +256,7 @@ img {
 	align-items: center;
 	justify-content: center;
 	transform: translateY(-0.6em);
-	transition: width 0.2s ease, transform 0.2s ease;
+	transition: transform 0.15s ease;
 }}
 @media only screen and (max-width: 1000px) and (min-width: calc(700px + 1px)) {#navbar_menu {
 	font-size: 1em;
