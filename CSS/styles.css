@@ -533,6 +533,7 @@ img {
 
 #footer {
 	padding: 1.5em 2.5em;
+	color: var(--light-gray);
 	border-top: 1px solid var(--light-border);
 }
 
@@ -542,7 +543,8 @@ img {
 }
 
 #footer_content {
-	font-size: 0.8em;
+	font-weight: 500;
+	font-size: 0.6em;
 	margin-top: 0.5em;
 	text-align: center;
 }
