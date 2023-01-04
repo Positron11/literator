@@ -156,10 +156,11 @@ img {
 }}
 #navbar.is-sticky #navbar_hero_wrapper {
 	opacity: 1;
-	width: 7.4em;
+	width: 7.5em;
 }
 
 #navbar_hero {
+	font-weight: 500;
 	font-size: 1.6em;
 	padding: 0.3em 0.6em;
 	border-radius: 0.2em;
