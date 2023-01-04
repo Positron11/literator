@@ -68,7 +68,7 @@ img {
 	z-index: 2;
 	position: fixed;
 	pointer-events: none;
-	backdrop-filter: blur(5px);
+	backdrop-filter: blur(3px);
 	transition: opacity 0.1s ease;
 }
 
