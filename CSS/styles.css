@@ -142,12 +142,8 @@ img {
 	padding: 0 2em;
 }}
 @media only screen and (max-width: 700px) {#navbar {
-	row-gap: 1em;
 	padding: 1em 0.5em;
 	flex-direction: column;
-}}
-@media only screen and (max-width: 700px) {#navbar:not(.is-sticky) {
-	row-gap: 0.9em;
 }}
 #navbar.is-sticky {
 	border-bottom: 1px solid transparent;
@@ -226,11 +222,28 @@ img {
 
 /* Navbar Menu */
 
+@media only screen and (min-width: calc(700px + 1px)) {#navbar_menu_wrapper {
+	width: 100%;
+}}
+@media only screen and (min-width: calc(700px + 1px)) {#navbar.is-sticky #navbar_menu_wrapper {
+	width: 12em;
+}}
+@media only screen and (max-width: 1000px) and (min-width: calc(700px + 1px)) {#navbar.is-sticky #navbar_menu_wrapper {
+	width: 11em;
+}}
+@media only screen and (max-width: 700px) {#navbar_menu_wrapper {
+	height: var(--mobile-menu-height);
+	overflow: hidden;
+	transition: height 0.1s ease;
+}}
+@media only screen and (max-width: 700px) {#navbar:not(.menu-open) #navbar_menu_wrapper {
+	height: 0;
+}}
+
 #navbar_menu {
 	display: flex;
 }
 @media only screen and (min-width: calc(700px + 1px)) {#navbar_menu {
-	width: 100%;
 	column-gap: 2em;
 	align-items: center;
 	justify-content: center;
@@ -242,23 +255,19 @@ img {
 	column-gap: 1.6em;
 }}
 @media only screen and (min-width: calc(700px + 1px)) {#navbar.is-sticky #navbar_menu {
-	width: 12em;
 	transform: none;
 }}
 @media only screen and (max-width: 1000px) and (min-width: calc(700px + 1px)) {#navbar.is-sticky #navbar_menu {
-	width: 11em;
 	font-size: 0.95em;
 }}
 @media only screen and (max-width: 700px) {#navbar_menu {
 	row-gap: 0.6em;
+	padding-top: 1em;
 	flex-direction: column;
 }}
 @media only screen and (max-width: 700px) {#navbar:not(.is-sticky) #navbar_menu {
-	margin-left: 0;
+	padding-top: 0.9em;
 	align-items: center;
-}}
-@media only screen and (max-width: 700px) {#navbar:not(.menu-open) #navbar_menu {
-	display: none;
 }}
 
 #navbar_menu .navbar-button {

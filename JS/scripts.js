@@ -3,6 +3,8 @@ const page = document.getElementById("page");
 const main = document.getElementById("main");
 
 const navbar = document.getElementById("navbar");
+const navbarMenu = document.getElementById("navbar_menu");
+const navbarMenuWrapper = document.getElementById("navbar_menu_wrapper");
 const mobileNavbarMenuButton = document.getElementById("mobile_navbar_menu_button");
 
 const bulletin = document.getElementById("bulletin");
@@ -29,6 +31,8 @@ window.addEventListener("resize", () => {
 	commonHandlers();
 	// briefly freeze mobile bulletin transitions
 	freezeTransitions(bulletinWrapper);
+	// calculate menu wrapper content height
+	navbarMenuWrapper.style.setProperty("--mobile-menu-height",  String(navbarMenu.clientHeight) + "px");
 });
 
 // bulletin scroll event listeners
@@ -37,7 +41,6 @@ bulletinContent.addEventListener("scroll", () => {bulletinScrollStatus(bulletinC
 
 // toggle mobile navbar menu
 mobileNavbarMenuButton.addEventListener("click", () => {navbar.classList.toggle("menu-open");});
-
 
 // toggle mobile bulletin
 mobileBulletinButton.addEventListener("click", () => {bulletinWrapper.classList.add("show");});
