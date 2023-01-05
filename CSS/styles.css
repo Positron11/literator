@@ -463,13 +463,16 @@ img {
 @media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button {
 	border-radius: 0;
 	border-bottom: 2px solid var(--dark-border);
-	transition: border-radius 0.1s ease-in;
+	transition: border-radius 0.1s ease-in, filter 0.15s ease;
 }}
 @media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button:first-child {
 	border-radius: 0 0.5em 0 0;
 }}
 @media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button:last-child {
 	border-radius: 0 0 0.5em 0;
+}}
+@media only screen and (min-width: calc(1450px + 1px)) {#toolbar:hover .toolbar-button:not(:hover) {
+	filter: brightness(0.7);
 }}
 @media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button:hover {
 	border-radius: 0 0.5em 0.5em 0;
