@@ -79,3 +79,8 @@ function commonHandlers() {
 	resizeBulletin();
 	bulletinScrollStatus();
 }
+
+// scroll to top
+function scrollToTop() {
+	document.body.scrollTop = document.documentElement.scrollTop = 0;
+}
