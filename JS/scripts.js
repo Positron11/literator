@@ -36,11 +36,10 @@ window.addEventListener("resize", () => {
 bulletinContent.addEventListener("scroll", () => {bulletinScrollStatus(bulletinContent);});
 
 
-// toggle mobile navbar menu
-mobileNavbarMenuButton.addEventListener("click", () => {
-	calculateNavbarMenuHeight();
-	navbar.classList.toggle("menu-open");
-});
+// calculate mobile navbar menu height on class change
+let navbarStickyWatcher = new ClassWatcher(navbar, 'is-sticky', calculateNavbarMenuHeight, calculateNavbarMenuHeight)
+let mobileNavbarToggleWatcher = new ClassWatcher(navbar, 'menu-open', calculateNavbarMenuHeight, calculateNavbarMenuHeight)
+
 
 // toggle mobile bulletin
 mobileBulletinButton.addEventListener("click", () => {bulletinWrapper.classList.add("show");});
@@ -53,6 +52,16 @@ bulletin.addEventListener("click", (ev) => {ev.stopPropagation();});
 function freezeTransitions(element) {
 	element.style.transition = "none";
 	setTimeout(() => element.style.transition = null, 100);
+}
+
+// scroll to top
+function scrollToTop() {
+	document.body.scrollTop = document.documentElement.scrollTop = 0;
+}
+
+// toggle navbar
+function toggleNavbarMenu() {
+	navbar.classList.toggle("menu-open");
 }
 
 // calculate menu wrapper content height
@@ -78,9 +87,4 @@ function bulletinScrollStatus() {
 function commonHandlers() {
 	resizeBulletin();
 	bulletinScrollStatus();
-}
-
-// scroll to top
-function scrollToTop() {
-	document.body.scrollTop = document.documentElement.scrollTop = 0;
 }
