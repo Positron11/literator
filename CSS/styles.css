@@ -442,19 +442,6 @@ img {
 	transform: translateX(-50%);;
 }}
 
-/* Desktop Toolbar Gap-Coverer */
-
-@media only screen and (min-width: calc(1450px + 1px)) {#toolbar::after {
-	left: 0;
-	top: 0.5em;
-	content: "";
-	z-index: -1;
-	bottom: 0.5em;
-	width: 3.05em;
-	position: absolute;
-	background-color: var(--dark-background);
-}}
-
 /* Toolbar Buttons */
 
 #toolbar .toolbar-button {
@@ -464,31 +451,33 @@ img {
 	color: var(--light-gray);
 	background-color: var(--dark-background);
 }
-#toolbar .toolbar-button:active {
-	background-color: #1f1f1f;
-}
 @media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button {
+	border-radius: 0;
+	border-bottom: 2px solid var(--dark-border);
+	transition: border-radius 0.1s ease-in;
+}}
+@media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button:first-child {
+	border-radius: 0 0.5em 0 0;
+}}
+@media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button:last-child {
+	border-radius: 0 0 0.5em 0;
+}}
+@media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button:hover {
 	border-radius: 0 0.5em 0.5em 0;
+	transition: border-radius 0.1s ease-out;
 }}
 @media only screen and (max-width: 1450px) {#toolbar .toolbar-button:not(:last-child) {
 	border-right: 2px solid var(--dark-border);
 }}
+#toolbar .toolbar-button:active {
+	background-color: #1f1f1f;
+}
+
+/* Toolbar Button Icon */
 
 #toolbar .toolbar-button-icon {
 	width: 0.85em;
 }
-
-/* Desktop Toolbar Button Separators */
-
-@media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button:not(:last-child):after {
-	left: 0;
-	bottom: 0;
-	content: "";
-	height: 2px;
-	width: 3.05em;
-	position: absolute;
-	background-color: var(--dark-border);
-}}
 
 /* Desktop Toolbar Hover Text */
 
