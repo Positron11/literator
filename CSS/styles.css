@@ -62,6 +62,10 @@ img {
 
 /* TEXT STYLING */
 
+.text {
+	line-height: 1.9em;
+}
+
 .heading {
 	font-size: 2.5em;
 	font-weight: 500;
@@ -77,6 +81,9 @@ img {
 .flexbox {
 	display: flex;
 }
+.flexbox.wrap {
+	flex-wrap: wrap;
+}
 .flexbox.column {
 	flex-direction: column;
 }
@@ -85,6 +92,10 @@ img {
 	column-gap: 0.3rem;
 }
 .flexbox.compact-spacing {
+	row-gap: 1rem;
+	column-gap: 1rem;
+}
+.flexbox.regular-spacing {
 	row-gap: 1.5rem;
 	column-gap: 1.5rem;
 }
@@ -113,6 +124,12 @@ img {
 .card.dark {
 	color: var(--light-gray);
 	background-color: var(--dark-background);
+}
+
+.card .header {
+	margin-bottom: 1.5em;
+	padding-bottom: 1.5em;
+	border-bottom: 1px solid var(--light-border);
 }
 
 
@@ -597,6 +614,51 @@ img {
 @media only screen and (max-width: 1400px) {.story.preview {
 	text-align: center;
 }}
+
+#story_dates {
+	font-size: 0.75em;
+	color: var(--dark-gray);
+}
+
+#story_authors .author {
+	font-weight: 480;
+	font-size: 0.75em;
+	padding: 0.4em 0.8em;
+	border-radius: 0.3em;
+	color: var(--light-gray);
+	background-color: var(--dark-background);
+	font-family: "Satoshi", sans-serif;
+}
+
+#story_content .literation {
+	padding-left: 2em;
+	position: relative;
+	border-left: 2px solid var(--light-border);
+}
+
+#story_content .literation::before {
+	left: 0;
+	top: 50%;
+	line-height: 1;
+	font-size: 0.6em;
+	font-weight: 500;
+	position: absolute;
+	border-radius: 0.3em;
+	padding: 0.5em 0.6em;
+	transform: translate(-50%, -50%);
+	font-family: "Satoshi", sans-serif;
+	background-color: var(--light-border);
+	content: attr(data-literation-number);
+	transition: filter 0.2s ease;
+}
+#story_content .literation:hover::before {
+	filter: invert();
+}
+
+#story_content .literation .literation-meta {
+	font-size: 0.75em;
+	color: var(--dark-gray);
+}
 
 
 /* FOOTER */
