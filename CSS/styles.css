@@ -400,7 +400,7 @@ img {
 	position: sticky;
 	border-radius: 0.7em;
 	align-self: flex-start;
-	background: repeating-linear-gradient(45deg, var(--light-border) 0px, var(--light-border) 6px, transparent 6px, transparent 14px);
+	background: repeating-linear-gradient(45deg, var(--light-border) 0px, var(--light-border) 5px, transparent 5px, transparent 14px);
 }}
 
 @media only screen and (max-width: 1400px) {#bulletin_wrapper {
