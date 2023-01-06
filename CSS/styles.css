@@ -358,7 +358,7 @@ img {
 	position: fixed;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(0,0,0,0.5);
+	backdrop-filter: blur(4px) brightness(0.9);
 	transition: opacity 0.15s ease;
 }}
 @media only screen and (max-width: 1400px) {#bulletin_wrapper:not(.show) {
