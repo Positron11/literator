@@ -354,7 +354,6 @@ img {
 	bottom: 0;
 	z-index: 3;
 	display: flex;
-	padding: 1.5em;
 	position: fixed;
 	align-items: center;
 	justify-content: center;
@@ -380,6 +379,7 @@ img {
 	border-radius: 0.7em 0 0.7em 0.7em;
 }}
 @media only screen and (max-width: 1400px) {#bulletin {
+	margin: 0 10vw;
 	max-width: 500px;
 	max-height: 75vh;
 	border-radius: 0.7em;
