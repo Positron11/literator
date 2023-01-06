@@ -481,7 +481,8 @@ img {
 	background-color: black;
 }}
 @media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button:hover {
-	border-radius: 0 0.5em 0.5em 0;
+	border-top-right-radius: 0.4em;
+	border-bottom-right-radius: 0.4em;
 	transition: border-radius 0.1s ease-out;
 }}
 @media only screen and (max-width: 1450px) {#toolbar .toolbar-button:not(:last-child) {
