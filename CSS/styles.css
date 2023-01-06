@@ -351,7 +351,6 @@ img {
 	right: 0;
 	bottom: 0;
 	z-index: 3;
-	display: flex;
 	padding: 1.5em;
 	position: fixed;
 	align-items: center;
@@ -407,12 +406,12 @@ img {
 #bulletin_scroll_indicator {
 	opacity: 0;
 	margin: auto;
-	width: 0.9em;
+	width: 0.75em;
 	transition: opacity 0.1s ease;
 	animation: bounce 2s ease infinite;
 }
 #bulletin_content:not(.fully-scrolled) + #bulletin_scroll_indicator {
-	opacity: 0.9;
+	opacity: 1;
 }
 @media only screen and (min-width: calc(1450px + 1px)) {#bulletin_scroll_indicator {
 	padding: 1.4em 0;
@@ -469,7 +468,6 @@ img {
 	background-color: var(--dark-background);
 }
 @media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button {
-	border-radius: 0;
 	border-bottom: 2px solid var(--dark-border);
 	transition: border-radius 0.2s ease-in, background-color 0.15s ease;
 }}
