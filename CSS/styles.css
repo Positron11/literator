@@ -406,14 +406,13 @@ img {
 /* Bulletin Content Scroll Indicator */
 
 #bulletin_scroll_indicator {
-	opacity: 0;
 	margin: auto;
 	width: 0.75em;
 	transition: opacity 0.1s ease;
 	animation: bounce 2s ease infinite;
 }
-#bulletin_content:not(.fully-scrolled) + #bulletin_scroll_indicator {
-	opacity: 1;
+#bulletin_content.fully-scrolled + #bulletin_scroll_indicator {
+	opacity: 0;
 }
 @media only screen and (min-width: calc(1450px + 1px)) {#bulletin_scroll_indicator {
 	padding: 1.4em 0;
