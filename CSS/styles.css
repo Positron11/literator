@@ -353,6 +353,7 @@ img {
 	right: 0;
 	bottom: 0;
 	z-index: 3;
+	display: flex;
 	padding: 1.5em;
 	position: fixed;
 	align-items: center;
