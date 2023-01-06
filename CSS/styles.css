@@ -65,7 +65,7 @@ img {
 #page {
 	margin: auto;
 	padding: 4em;
-	max-width: 1200px;
+	max-width: 1240px;
 }
 @media only screen and (max-width: 1000px) {#page {
 	padding: 4em 3em;
@@ -335,16 +335,18 @@ img {
 
 /* BULLETIN */
 
-#bulletin_container,
-#bulletin_wrapper {
+#bulletin_container {
 	display: flex;
 }
 @media only screen and (min-width: calc(1450px + 1px)) {#bulletin_container {
 	top: 8.5em;
-	flex: 0 0 16em;
+	flex: 0 0 18em;
 	position: sticky;
+	border-radius: 0.7em;
 	align-self: flex-start;
+	background: repeating-linear-gradient(45deg, var(--light-gray) 0px, var(--light-gray) 6px, transparent 6px, transparent 14px);
 }}
+
 @media only screen and (max-width: 1450px) {#bulletin_wrapper {
 	top: 0;
 	left: 0;
@@ -372,8 +374,8 @@ img {
 	background-color: var(--dark-background);
 }
 @media only screen and (min-width: calc(1450px + 1px)) {#bulletin {
-	min-height: 17.5em;
-	padding: 2.5em 3em 0 3em;
+	min-height: 310px;
+	padding: 2.5em 2.5em 0 3em;
 	border-radius: 0.7em 0 0.7em 0.7em;
 }}
 @media only screen and (max-width: 1450px) {#bulletin {
@@ -442,12 +444,9 @@ img {
 	user-select: none;
 }
 @media only screen and (min-width: calc(1450px + 1px)) {#toolbar {
-	top: 0;
-	left: 100%;
-	position: absolute;
+	width: 3.15em;
 	flex-direction: column;
 	align-items: flex-start;
-	border-left: 2px solid #222;
 }}
 @media only screen and (max-width: 1450px) {#toolbar {
 	left: 50%;
@@ -468,14 +467,15 @@ img {
 	background-color: var(--dark-background);
 }
 @media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button {
+	border-left: 2px solid #222;
 	border-bottom: 2px solid var(--dark-border);
 	transition: border-radius 0.2s ease-in, background-color 0.15s ease;
 }}
 @media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button:first-child {
-	border-radius: 0 0.5em 0 0;
+	border-radius: 0 0.7em 0 0;
 }}
 @media only screen and (min-width: calc(1450px + 1px)) {#toolbar .toolbar-button:last-child {
-	border-radius: 0 0 0.5em 0;
+	border-radius: 0 0 0.7em 0;
 }}
 @media only screen and (min-width: calc(1450px + 1px)) {#toolbar:hover .toolbar-button:not(:hover) {
 	background-color: black;
