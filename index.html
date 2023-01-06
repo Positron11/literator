@@ -40,7 +40,7 @@
 	<!-- Page container -->
 	<div id="page">
 		<!-- Page header -->
-		<div id="page_hero">
+		<div id="page_hero" class="minimal-spacing column flexbox">
 			<div id="hero_pronounciation">lɪ<span>·</span>tə<span>·</span>rə<span>·</span>tʃər</div>
 			<div id="hero_heading"><a class="unstyled" href="index.html">Literator</a></div>
 		</div>
@@ -87,21 +87,18 @@
 			<!-- Announcements and such -->
 			<div id="bulletin_container">
 				<div id="bulletin_wrapper">
-					<div id="bulletin">
+					<div id="bulletin" class="dark compact-spacing column flexbox card">
 						<!-- Header -->
-						<div id="bulletin_header">
-							<div id="bulletin_heading">Savoir</div>
-						</div>
+						<div id="bulletin_header" class="heading">Savoir</div>
 						
 						<!-- Content -->
-						<div id="bulletin_content">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-							<p>Provident dolorem, sed explicabo alias velit fugiat sapiente aperiam, nisi quaerat doloremque deleniti! Suscipit officia vitae eligendi voluptatibus perferendis exercitationem rem libero?</p>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolorem, sed explicabo alias velit fugiat sapiente aperiam, nisi quaerat doloremque deleniti! Suscipit officia vitae eligendi voluptatibus perferendis exercitationem rem libero?</p>
+						<div id="bulletin_content_wrapper">
+							<div id="bulletin_content">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+								<p>Provident dolorem, sed explicabo alias velit fugiat sapiente aperiam, nisi quaerat doloremque deleniti! Suscipit officia vitae eligendi voluptatibus perferendis exercitationem rem libero?</p>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolorem, sed explicabo alias velit fugiat sapiente aperiam, nisi quaerat doloremque deleniti! Suscipit officia vitae eligendi voluptatibus perferendis exercitationem rem libero?</p>
+							</div>
 						</div>
-						
-						<!-- Scroll indicator icon -->
-						<img id="bulletin_scroll_indicator" src="Assets/Images/Icons/down.svg" alt="Scroll Down">
 					
 						<!-- Mobile bulletin close button -->
 						<img id="bulletin_close_button" class="clickable" src="Assets/Images/Icons/close.svg" alt="Scroll Down">
@@ -138,24 +135,30 @@
 			
 			<!-- Story previews -->
 			<div id="main_content">
-				<div class="clickable story preview">
-					<div class="title">This is a Story</div>
-					<div class="content">
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis accusamus voluptas delectus consectetur quaerat deserunt, porro itaque necessitatibus accusantium doloribus eos voluptatibus magni architecto minima aut in odio. Nesciunt, provident.</p>
+				<div id="story_preview_list" class="comfortable-spacing column flexbox">
+					<div class="clickable story preview compact-spacing column flexbox card">
+						<div class="header">
+							<div class="heading">This is a Story</div>
+						</div>
+						<div class="content">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis accusamus voluptas delectus consectetur quaerat deserunt, porro itaque necessitatibus accusantium doloribus eos voluptatibus magni architecto minima aut in odio. Nesciunt, provident.</p>
+						</div>
 					</div>
-				</div>
-
-				<div class="clickable story preview">
-					<div class="title">This is a Story</div>
-					<div class="content">
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis accusamus voluptas delectus consectetur quaerat deserunt, porro itaque necessitatibus accusantium doloribus eos voluptatibus magni architecto minima aut in odio. Nesciunt, provident.</p>
+					<div class="clickable story preview compact-spacing column flexbox card">
+						<div class="header">
+							<div class="heading">This is Another Story</div>
+						</div>
+						<div class="content">
+							<p>Gravis, tum in morbos gravis, tum in damna, tum in damna, tum in damna, tum in damna, tum in dedecora incurrunt, saepe etiam videmus, et perspicuum est omnis rectas res atque laudabilis eo.</p>
+						</div>
 					</div>
-				</div>
-
-				<div class="clickable story preview">
-					<div class="title">This is a Story</div>
-					<div class="content">
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis accusamus voluptas delectus consectetur quaerat deserunt, porro itaque necessitatibus accusantium doloribus eos voluptatibus magni architecto minima aut in odio. Nesciunt, provident.</p>
+					<div class="clickable story preview compact-spacing column flexbox card">
+						<div class="header">
+							<div class="heading">This is a Final Story</div>
+						</div>
+						<div class="content">
+							<p>Probes eius, a quo dissentias. Quid enim est a Chrysippo praetermissum in Stoicis? Legimus tamen Diogenem, Antipatrum, Mnesarchum, Panaetium, multos alios in primisque familiarem nostrum Posidonium. Quid? Theophrastus mediocriterne delectat, cum tractat locos ab Aristotele ante.</p>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -10,6 +10,7 @@ const mobileNavbarMenuButton = document.getElementById("mobile_navbar_menu_butto
 const bulletin = document.getElementById("bulletin");
 const bulletinWrapper = document.getElementById("bulletin_wrapper");
 const bulletinContent = document.getElementById("bulletin_content");
+const bulletinContentWrapper = document.getElementById("bulletin_content_wrapper");
 
 const bulletinCloseButton = document.getElementById("bulletin_close_button");
 const mobileBulletinButton = document.getElementById("mobile_bulletin_button");
@@ -80,7 +81,7 @@ function resizeBulletin() {
 
 // sidebar scroll indicator
 function bulletinScrollStatus() {
-	bulletinContent.classList.toggle("fully-scrolled", (bulletinContent.scrollHeight - bulletinContent.scrollTop) < bulletinContent.clientHeight + 5);
+	bulletinContentWrapper.classList.toggle("fully-scrolled", (bulletinContent.scrollHeight - bulletinContent.scrollTop) < bulletinContent.clientHeight + 5);
 }
 
 // combine common handlers
