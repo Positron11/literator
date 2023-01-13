@@ -9,6 +9,11 @@
 	--dark-border: #222;
 	--dark-gray: #999;
 	--light-gray: #eaeaea;
+
+	/* Fonts */
+	--serif-font: "Karma", serif;
+	--display-font: "Melodrama", serif;
+	--sans-serif-font: "Satoshi", sans-serif;
 }
 
 
@@ -26,7 +31,7 @@ body {
 	font-weight: 400;
 	scroll-behavior: smooth;
 	color: var(--foreground);
-	font-family: "Karma", serif;
+	font-family: var(--serif-font);
 }
 
 /* Paragraphs */
@@ -69,7 +74,7 @@ img {
 .heading {
 	font-size: 2.5em;
 	font-weight: 500;
-	font-family: "Melodrama", serif;
+	font-family: var(--display-font);
 }
 @media only screen and (max-width: 700px) {.heading {
 	font-size: 2em;
@@ -181,7 +186,7 @@ img {
 
 #hero_heading {
 	font-size: 4.8em;
-	font-family: "Melodrama", serif;
+	font-family: var(--display-font);
 }
 
 
@@ -245,7 +250,7 @@ img {
 	padding: 0.3em 0.6em;
 	border-radius: 0.2em;
 	color: var(--light-gray);
-	font-family: "Melodrama", serif;
+	font-family: var(--display-font);
 	background-color: var(--dark-background);
 }
 
@@ -336,7 +341,7 @@ img {
 #navbar_menu .navbar-button {
 	font-weight: 450;
 	position: relative;
-	font-family: "Satoshi", serif;
+	font-family: var(--sans-serif-font);
 }
 @media only screen and (max-width: 700px) {#navbar_menu .navbar-button {
 	display: flex;
@@ -464,7 +469,7 @@ img {
 	font-size: 2.5em;
 	font-weight: 500;
 	margin-bottom: 0.5em;
-	font-family: "Melodrama", serif;
+	font-family: var(--display-font);
 }
 
 #bulletin_content_wrapper {
@@ -599,7 +604,7 @@ img {
 	font-size: 0.75em;
 	margin-left: 0.8em;
 	letter-spacing: 0.05em;
-	font-family: "Satoshi", sans-serif;
+	font-family: var(--sans-serif-font);
 }
 
 /* Mobile Bulletin Button */
@@ -627,7 +632,7 @@ img {
 	border-radius: 0.3em;
 	color: var(--light-gray);
 	background-color: var(--dark-background);
-	font-family: "Satoshi", sans-serif;
+	font-family: var(--sans-serif-font);
 }
 
 #story_content .literation {
@@ -646,7 +651,7 @@ img {
 	border-radius: 0.3em;
 	padding: 0.5em 0.6em;
 	transform: translate(-50%, -50%);
-	font-family: "Satoshi", sans-serif;
+	font-family: var(--sans-serif-font);
 	background-color: var(--light-border);
 	content: attr(data-literation-number);
 	transition: filter 0.2s ease;
@@ -673,7 +678,7 @@ img {
 	font-size: 2.4em;
 	font-weight: 500;
 	text-align: center;
-	font-family: "Melodrama", serif;
+	font-family: var(--display-font);
 }
 
 #footer_content {
