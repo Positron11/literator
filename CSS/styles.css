@@ -453,13 +453,6 @@ img {
 	max-height: 80vh;
 }}
 
-#bulletin_heading {
-	font-size: 2.5em;
-	font-weight: 500;
-	margin-bottom: 0.5em;
-	font-family: var(--display-font);
-}
-
 #bulletin_content_wrapper {
 	display: flex;
 	min-height: 0;
