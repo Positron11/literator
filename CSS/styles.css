@@ -74,7 +74,7 @@ img {
 
 .heading {
 	font-size: 2.5em;
-	font-weight: 450;
+	font-weight: 600;
 	font-family: var(--display-font);
 }
 @media only screen and (max-width: 700px) {.heading {
@@ -172,7 +172,7 @@ img {
 
 #hero_heading {
 	font-size: 5em;
-	font-weight: 350;
+	font-weight: 500;
 	font-family: var(--display-font);
 }
 
@@ -326,6 +326,7 @@ img {
 /* Navbar Menu Buttons */
 
 #navbar_menu .navbar-button {
+	font-weight: 500;
 	position: relative;
 	font-family: var(--sans-serif-font);
 }
@@ -579,7 +580,7 @@ img {
 }}
 #toolbar .toolbar-button .hidden-text span {
 	display: block;
-	font-weight: 450;
+	font-weight: 500;
 	font-size: 0.75em;
 	margin-left: 0.8em;
 	letter-spacing: 0.05em;
