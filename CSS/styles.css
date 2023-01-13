@@ -170,19 +170,6 @@ img {
 	margin-bottom: -0.5em;
 }}
 
-/* Pronounciation */
-
-#hero_pronounciation {
-	font-size: 1.5em;
-	letter-spacing: 0.15em;
-	color: var(--light-gray);
-	font-family: "Gentium Plus", serif;
-}
-
-#hero_pronounciation span {
-	margin: 0 0.25em;
-}
-
 /* Heading */
 
 #hero_heading {
