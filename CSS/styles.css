@@ -28,7 +28,7 @@ body {
 	width: 100%;
 	height: 100%;
 	font-size: 20px;
-	font-weight: 400;
+	font-weight: 300;
 	scroll-behavior: smooth;
 	color: var(--foreground);
 	font-family: var(--sans-serif-font);
@@ -74,7 +74,7 @@ img {
 
 .heading {
 	font-size: 2.5em;
-	font-weight: 550;
+	font-weight: 450;
 	font-family: var(--display-font);
 }
 @media only screen and (max-width: 700px) {.heading {
@@ -162,11 +162,9 @@ img {
 }
 @media only screen and (max-width: 1000px) {#page_hero {
 	font-size: 0.85em;
-	font-weight: 440;
 }}
 @media only screen and (max-width: 700px) {#page_hero {
 	font-size: 0.65em;
-	font-weight: 480;
 	margin-bottom: -0.5em;
 }}
 
@@ -174,6 +172,7 @@ img {
 
 #hero_heading {
 	font-size: 5em;
+	font-weight: 350;
 	font-family: var(--display-font);
 }
 
@@ -327,7 +326,6 @@ img {
 /* Navbar Menu Buttons */
 
 #navbar_menu .navbar-button {
-	font-weight: 550;
 	position: relative;
 	font-family: var(--sans-serif-font);
 }
@@ -581,7 +579,7 @@ img {
 }}
 #toolbar .toolbar-button .hidden-text span {
 	display: block;
-	font-weight: 600;
+	font-weight: 450;
 	font-size: 0.75em;
 	margin-left: 0.8em;
 	letter-spacing: 0.05em;
