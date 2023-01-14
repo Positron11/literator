@@ -68,6 +68,10 @@ img {
 
 /* TEXT STYLING */
 
+.enable-ligatures {
+	font-variant-ligatures: discretionary-ligatures;
+}
+
 .text {
 	line-height: 1.9em;
 }
