@@ -446,6 +446,7 @@ img {
 	min-height: 310px;
 	padding-bottom: 4em;
 	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
 }}
 @media only screen and (max-width: 1400px) {#bulletin {
 	padding: 5em;
