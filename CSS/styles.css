@@ -2,13 +2,13 @@
 
 :root {
 	/* Colors */
-	--foreground: #111;
-	--light-background: #fff;
-	--dark-background: #111;
-	--light-border: #eee;
-	--dark-border: #222;
+	--black: #000;
 	--dark-gray: #999;
 	--light-gray: #eaeaea;
+	--light-background: #fff;
+	--dark-background: #090909;
+	--light-border: #eee;
+	--dark-border: #1a1a1a;
 
 	/* Fonts */
 	--serif-font: "Karma", serif;
@@ -30,7 +30,7 @@ body {
 	font-size: 20px;
 	font-weight: 350;
 	scroll-behavior: smooth;
-	color: var(--foreground);
+	color: var(--black);
 	font-family: var(--sans-serif-font);
 	background-color: var(--light-background);
 }
@@ -337,7 +337,7 @@ img {
 	transition: filter 0.1s ease;
 }}
 @media only screen and (max-width: 700px) {#navbar:not(.is-sticky) #navbar_menu .navbar-button {
-	background-color: #eee;
+	background-color: #f6f6f6;
 }}
 @media only screen and (max-width: 700px) {#navbar.is-sticky #navbar_menu .navbar-button {
 	column-gap: 0.7em;
@@ -543,18 +543,15 @@ img {
 	background-color: var(--dark-background);
 }
 @media only screen and (min-width: calc(1400px + 1px)) {#toolbar .toolbar-button {
-	border-left: 2px solid #222;
+	border-left: 2px solid var(--dark-border);
 	border-bottom: 2px solid var(--dark-border);
-	transition: border-radius 0.2s ease-in, background-color 0.15s ease;
+	transition: border-radius 0.2s ease-in;
 }}
 @media only screen and (min-width: calc(1400px + 1px)) {#toolbar .toolbar-button:first-child {
 	border-radius: 0 0.6em 0 0;
 }}
 @media only screen and (min-width: calc(1400px + 1px)) {#toolbar .toolbar-button:last-child {
 	border-radius: 0 0 0em 0;
-}}
-@media only screen and (min-width: calc(1400px + 1px)) {#toolbar:hover .toolbar-button:not(:hover) {
-	background-color: black;
 }}
 @media only screen and (min-width: calc(1400px + 1px)) {#toolbar .toolbar-button:hover {
 	border-top-right-radius: 0.3em;
