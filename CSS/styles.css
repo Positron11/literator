@@ -412,7 +412,7 @@ img {
 	position: sticky;
 	border-radius: 0.7em;
 	align-self: flex-start;
-	background: repeating-linear-gradient(45deg, var(--light-border) 0px, var(--light-border) 5px, transparent 5px, transparent 12px);
+	background: repeating-linear-gradient(45deg, var(--light-border) 0px, var(--light-border) 5px, transparent 5px, transparent 11px);
 }}
 
 @media only screen and (max-width: 1400px) {#bulletin_wrapper {
@@ -548,7 +548,7 @@ img {
 	border-radius: 0 0.7em 0 0;
 }}
 @media only screen and (min-width: calc(1400px + 1px)) {#toolbar .toolbar-button:last-child {
-	border-radius: 0 0 0.7em 0;
+	border-radius: 0 0 0em 0;
 }}
 @media only screen and (min-width: calc(1400px + 1px)) {#toolbar:hover .toolbar-button:not(:hover) {
 	background-color: black;
