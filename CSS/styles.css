@@ -301,21 +301,17 @@ img {
 	user-select: none;
 }
 @media only screen and (min-width: calc(700px + 1px)) {#navbar_menu {
-	column-gap: 2em;
+	column-gap: 1.6em;
 	align-items: center;
 	justify-content: center;
 	transform: translateY(-0.6em);
 	transition: transform 0.15s ease;
 }}
 @media only screen and (max-width: 1000px) and (min-width: calc(700px + 1px)) {#navbar_menu {
-	font-size: 1em;
-	column-gap: 1.6em;
+	font-size: 0.9em;
 }}
 @media only screen and (min-width: calc(700px + 1px)) {#navbar.is-sticky #navbar_menu {
 	transform: none;
-}}
-@media only screen and (max-width: 1000px) and (min-width: calc(700px + 1px)) {#navbar.is-sticky #navbar_menu {
-	font-size: 0.95em;
 }}
 @media only screen and (max-width: 700px) {#navbar_menu {
 	row-gap: 0.7em;
@@ -350,9 +346,19 @@ img {
 	filter: brightness(0.95);
 }}
 
+@media only screen and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-button span {
+	width: 3.5em;
+	text-align: center;
+	display: inline-block;
+	transition: font-weight 0.1s ease;
+}}
 @media only screen and (max-width: 700px) {#navbar_menu .navbar-button span {
 	font-weight: 450;
 	font-size: 0.9em;
+}}
+@media only screen and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-button:hover span {
+	font-weight: 700;
+	font-style: italic;
 }}
 @media only screen and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-button:active span {
 	color: var(--dark-gray);
@@ -361,12 +367,9 @@ img {
 /* Navbar Button Separators */
 
 @media only screen and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-button:not(:last-child)::after {
-	right: -1em;
 	content: "·";
+	right: -0.8em;
 	position: absolute;
-}}
-@media only screen and (max-width: 1000px) and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-button:not(:last-child)::after {
-	right: -0.9em;
 }}
 
 /* Mobile Navbar Button Icons */
