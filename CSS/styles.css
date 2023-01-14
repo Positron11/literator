@@ -78,7 +78,7 @@ img {
 
 .heading {
 	font-size: 2.5em;
-	font-weight: 600;
+	font-weight: 550;
 	font-family: var(--display-font);
 }
 @media only screen and (max-width: 700px) {.heading {
@@ -162,6 +162,7 @@ img {
 /* PAGE HERO */
 
 #page_hero {
+	font-weight: 400;
 	text-align: center;
 }
 @media only screen and (max-width: 1000px) {#page_hero {
@@ -175,8 +176,7 @@ img {
 /* Heading */
 
 #hero_heading {
-	font-size: 5em;
-	font-weight: 500;
+	font-size: 5.5em;
 	font-family: var(--display-font);
 }
 
@@ -330,7 +330,6 @@ img {
 /* Navbar Menu Buttons */
 
 #navbar_menu .navbar-button {
-	font-weight: 500;
 	position: relative;
 	font-family: var(--sans-serif-font);
 }
@@ -352,6 +351,7 @@ img {
 }}
 
 @media only screen and (max-width: 700px) {#navbar_menu .navbar-button span {
+	font-weight: 450;
 	font-size: 0.9em;
 }}
 @media only screen and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-button:active span {
