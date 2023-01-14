@@ -148,7 +148,7 @@ img {
 #page {
 	margin: auto;
 	padding: 4em;
-	max-width: 1240px;
+	max-width: 1400px;
 }
 @media only screen and (max-width: 1000px) {#page {
 	padding: 4em 3em;
