@@ -366,7 +366,7 @@ img {
 /* Navbar Button Separators */
 
 @media only screen and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-button:not(:last-child)::after {
-	content: "·";
+	content: "/";
 	right: -0.8em;
 	position: absolute;
 }}
