@@ -1,0 +1,9 @@
+/* STORY PREVIEWS */
+
+#story_previews > *:not(:last-child) {
+	border-bottom: 1px solid var(--light-gray);
+}
+
+@media only screen and (max-width: 1500px) {#story_previews .story * {
+	text-align: center;
+}}

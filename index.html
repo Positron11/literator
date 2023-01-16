@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+	<!-- Title -->
 	<title>Literator</title>
 
 	<!-- Page meta -->
@@ -15,11 +16,8 @@
 	<meta name="description" content="Collaborative story-writing.">
 
 	<!-- OG meta -->
-	<meta property="og:site_name" content="Home · Literator">
+	<meta property="og:site_name" content="Literator">
 	<meta property="og:url" content="url">
-
-	<!-- Twitter meta -->
-	<meta name="twitter:card" content="summary">
 
 	<!-- OG article meta tags -->
 	<meta property="og:type" content="website">
@@ -33,106 +31,62 @@
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="CSS/fonts.css">
-	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
+	<link rel="stylesheet" type="text/css" href="CSS/main.css">
+	<link rel="stylesheet" type="text/css" href="CSS/home.css">
 </head>
 
 <body>
-	<!-- Page container -->
 	<div id="page">
-		<!-- Page hero -->
-		<div id="page_hero" class="minimal-spacing column flexbox"><a class="unstyled" href="index.html">lIterator</a></div>
-		
-		<!-- Navbar -->
+		<div id="hero">
+			<div id="hero_heading">lIterator</div>
+		</div>
+
 		<div id="navbar">
-			<a id="navbar_hero" class="unstyled" href="index.html">lIterator</a>
-
-			<!-- Mobile menu button -->
-			<div id="mobile_navbar_menu_button" class="clickable" onclick="toggleNavbarMenu();">
-				<img src="Assets/Images/Icons/menu.svg" alt="Menu">
+			<div id="navbar_hero_wrapper">
+				<div id="navbar_hero">
+					<span>lIterator</span>
+				</div>
 			</div>
-	
-			<!-- Links -->
-			<div id="navbar_menu_wrapper" class="unselectable">
-				<div id="navbar_menu" class="flexbox">
-					<div class="clickable navbar-button">
-						<img class="navbar-button-icon" src="Assets/Images/Icons/profile.svg" alt="Profile">
-						<span>Profile</span>
-					</div>
 
-					<div class="clickable navbar-button">
-						<img class="navbar-button-icon" src="Assets/Images/Icons/books.svg" alt="Library">
-						<span>Library</span>
-					</div>
+			<img id="mobile_navbar_menu_button" class="clickable" src="Assets/Images/Icons/menu.svg" alt="menu" onclick="toggleNavbarMenu();">
 
-					<div class="clickable navbar-button">
-						<img class="navbar-button-icon" src="Assets/Images/Icons/compass.svg" alt="Explore">
+			<div id="navbar_menu_wrapper">
+				<div id="navbar_menu">
+					<a class="unstyled navbar-link" href="#">
 						<span>Explore</span>
-					</div>
+					</a>
+					
+					<a class="unstyled navbar-link" href="#">
+						<span>Library</span>
+					</a>
+					
+					<a class="unstyled navbar-link" href="#">
+						<span>Profile</span>
+					</a>
 				</div>
 			</div>
 		</div>
 
-		<!-- Navbar Dimmer -->
-		<div id="navbar_dimmer" onclick="toggleNavbarMenu();"></div>
-		
-		<!-- Main content -->
 		<div id="main">
-			<!-- Announcements and such -->
-			<div id="bulletin_container">
-				<div id="bulletin_wrapper">
-					<div id="bulletin" class="dark regular-spacing column flexbox card">
-						<!-- Header -->
-						<div id="bulletin_heading" class="heading">News</div>
-						
-						<!-- Content -->
-						<div id="bulletin_content_wrapper">
-							<div id="bulletin_content">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-								<p>Provident dolorem, sed explicabo alias velit fugiat sapiente aperiam, nisi quaerat doloremque deleniti! Suscipit officia vitae eligendi voluptatibus perferendis exercitationem rem libero?</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolorem, sed explicabo alias velit fugiat sapiente aperiam, nisi quaerat doloremque deleniti! Suscipit officia vitae eligendi voluptatibus perferendis exercitationem rem libero?</p>
-							</div>
-						</div>
-					
-						<!-- Mobile bulletin close button -->
-						<img id="bulletin_close_button" class="clickable" src="Assets/Images/Icons/close.svg" alt="Scroll Down">
-					</div>	
+			<div class="card" id="bulletin">
+				<div class="header" id="bulletin_header">
+					<div class="heading">News</div>
 				</div>
 
-				<!-- Toolbar -->
-				<div id="toolbar" class="unselectable">
-					<div class="clickable toolbar-button" onclick="scrollToTop();">
-						<img class="clickable toolbar-button-icon" src="Assets/Images/Icons/top.svg" alt="Scroll Top">
-						<div class="hidden-text"><span>Top.</span></div>
-					</div>	
-					
-					<div id="mobile_bulletin_button" class="clickable toolbar-button">
-						<img class="clickable toolbar-button-icon" src="Assets/Images/Icons/loudspeaker.svg" alt="Updates">
-					</div>
-					
-					<div class="clickable toolbar-button">
-						<img class="clickable toolbar-button-icon" src="Assets/Images/Icons/bell.svg" alt="Updates">
-						<div class="hidden-text"><span>Updates.</span></div>
-					</div>
-					
-					<div class="clickable toolbar-button">
-						<img class="clickable toolbar-button-icon" src="Assets/Images/Icons/write.svg" alt="Resume">
-						<div class="hidden-text"><span>Resume.</span></div>
-					</div>
-					
-					<div class="clickable toolbar-button">
-						<img class="clickable toolbar-button-icon" src="Assets/Images/Icons/plus.svg" alt="New">
-						<div class="hidden-text"><span>New.</span></div>
-					</div>
+				<div id="bulletin_content">
+					<p>Dark spruce forest frowned on either side of the frozen waterway.</p>
+					<p>The trees had been stripped by a recent wind of their white covering of frost, and they seemed to lean toward each other, black and ominous, in the fading light.</p>
+					<p>A vast silence reigned over the land. The land itself was a desolation, lifeless, without movement, so lone and cold that the spirit of it was not even that of sadness. There was a hint in it of laughter, but of a laughter more terrible than any sadness — a laughter that was mirthless as the smile of the Sphinx, a laughter cold as the frost and partaking of the grimness of infallibility.</p>
 				</div>
-			</div>	
-			
-			<!-- Story previews -->
+			</div>
+
 			<div id="main_content">
-				<div id="story_preview_list" class="column flexbox">
+				<div id="story_previews">
 					<div class="story preview card">
 						<div class="header">
-							<div class="heading">The Curious Case of Benjamin Button</div>
+							<div class="title heading">The Curious Case of Benjamin Button</div>
 						</div>
+
 						<div class="content">
 							<p>As long ago as 1860 it was the proper thing to be born at home. At present, so I am told, the high gods of medicine have decreed that the first cries of the young shall be uttered upon the anaesthetic air of a hospital, preferably a fashionable one.</p>
 						</div>
@@ -140,34 +94,34 @@
 
 					<div class="story preview card">
 						<div class="header">
-							<div class="heading">To Kill a Mockingbird</div>
-						</div>	
+							<div class="title heading">To Kill a Mockingbird</div>
+						</div>
+
 						<div class="content">
 							<p>Atticus said to Jem one day, “I’d rather you shot at tin cans in the backyard, but I know you’ll go after birds. Shoot all the blue jays you want, if you can hit ‘em, but remember it’s a sin to kill a mockingbird.” That was the only time I ever heard Atticus say it was a sin to do something, and I asked Miss Maudie about it. “Your father’s right,” she said.</p>
-						</div>	
-					</div>	
+						</div>
+					</div>
 
 					<div class="story preview card">
 						<div class="header">
-							<div class="heading">In Search of Lost Time</div>
-						</div>	
+							<div class="title heading">In Search of Lost Time</div>
+						</div>
+
 						<div class="content">
-							<p>We believe that we can change the things around us in accordance with our desires—we believe it because otherwise we can see no favourable outcome. We do not think of the outcome which generally comes to pass and is also favourable: we do not succeed in changing things in accordance with our desires, but gradually our desires change.</p>
-						</div>	
-					</div>	
+							<p>believe that we can change the things around us in accordance with our desires—we believe it because otherwise we can see no favourable outcome. We do not think of the outcome which generally comes to pass and is also favourable: we do not succeed in changing things in accordance with our desires, but gradually our desires change.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	
-		<!-- Footer -->
+
 		<div id="footer">
-			<div id="footer_hero">Literator</div>
-			<div id="footer_content">
-				<p>By Aarush K. and Ayman M.</p>
+			<div id="footer_hero">
+				<div id="footer_hero_heading">lIterator</div>
+				<div id="footer_hero_subheading">By Aarush K. and Ayman M.</div>
 			</div>
 		</div>
 	</div>
-
 
 	<!-- Scripts -->
 	<script src="JS/class_watcher.js"></script>
