@@ -364,7 +364,7 @@ img { display: block; }
 	position: fixed;
 	align-items: center;
 	justify-content: center;
-	backdrop-filter: blur(4px) brightness(0.9);
+	background-color: rgba(0,0,0,0.3);
 	transition: opacity 0.15s ease;
 }}
 @media only screen and (max-width: 1400px) {#bulletin_wrapper:not(.show) {
@@ -390,7 +390,6 @@ img { display: block; }
 	max-width: 500px;
 	max-height: 70vh;
 	border-radius: 0.25em;
-	box-shadow: 0 0 20px 10px rgba(34,34,34,0.3);	
 }}
 @media only screen and (max-width: 500px) {#bulletin { padding: 4em; }}
 
