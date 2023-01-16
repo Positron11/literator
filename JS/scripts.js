@@ -37,11 +37,6 @@ window.addEventListener("resize", () => {
 bulletinContent.addEventListener("scroll", () => {bulletinScrollStatus(bulletinContent);});
 
 
-// calculate mobile navbar menu height on class change
-let navbarStickyWatcher = new ClassWatcher(navbar, 'is-sticky', calculateNavbarMenuHeight, calculateNavbarMenuHeight)
-let mobileNavbarToggleWatcher = new ClassWatcher(navbar, 'menu-open', calculateNavbarMenuHeight, calculateNavbarMenuHeight)
-
-
 // toggle mobile bulletin
 mobileBulletinButton.addEventListener("click", () => {bulletinWrapper.classList.add("show");});
 bulletinCloseButton.addEventListener("click", () => {bulletinWrapper.classList.remove("show");});
@@ -69,8 +64,8 @@ function toggleNavbarMenu() {
 function resizeBulletin() {
 	if (window.innerWidth > 1240) {
 		stopAtMainEnd = Math.max(0, window.innerHeight - main.getBoundingClientRect().bottom);
-		distanceFromTop = window.innerHeight - (navbar.getBoundingClientRect().bottom);
-		bulletin.style.maxHeight = String((distanceFromTop - stopAtMainEnd) + 5) + "px";
+		distanceFromTop = window.innerHeight - (navbar.getBoundingClientRect().bottom - 5);
+		bulletin.style.maxHeight = String(distanceFromTop - stopAtMainEnd) + "px";
 	} else {bulletin.style.maxHeight = null;}
 }
 

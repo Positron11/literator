@@ -371,6 +371,7 @@ img { display: block; }
 	margin: 0 10vw;
 	max-width: 500px;
 	max-height: 75vh;
+	border-radius: 0.25em;
 	box-shadow: 0 0 20px 10px rgba(34,34,34,0.3);	
 }}
 @media only screen and (max-width: 500px) {#bulletin {
