@@ -329,7 +329,7 @@ img { display: block; }
 	display: flex;
 }
 @media only screen and (min-width: calc(1400px + 1px)) {#bulletin_container {
-	top: 4.9em;
+	top: 5.05em;
 	flex: 0 0 20em;
 	position: sticky;
 	align-self: flex-start;
