@@ -516,49 +516,6 @@ img { display: block; }
 	text-align: center;
 }}
 
-#story_dates {
-	font-size: 0.75em;
-	color: var(--dark-gray);
-}
-
-#story_authors .author {
-	font-weight: 480;
-	font-size: 0.75em;
-	padding: 0.4em 0.8em;
-	color: var(--almost-white);
-	background-color: var(--dark-background);
-	font-family: var(--sans-serif-font);
-}
-
-#story_content .literation {
-	padding-left: 2em;
-	position: relative;
-	border-left: 2px solid var(--light-border);
-}
-
-#story_content .literation::before {
-	left: 0;
-	top: 50%;
-	line-height: 1;
-	font-size: 0.6em;
-	font-weight: 500;
-	position: absolute;
-	padding: 0.5em 0.6em;
-	transform: translate(-50%, -50%);
-	font-family: var(--sans-serif-font);
-	background-color: var(--light-border);
-	content: attr(data-literation-number);
-	transition: filter 0.2s ease;
-}
-#story_content .literation:hover::before {
-	filter: invert();
-}
-
-#story_content .literation .literation-meta {
-	font-size: 0.75em;
-	color: var(--dark-gray);
-}
-
 
 /* FOOTER */
 
