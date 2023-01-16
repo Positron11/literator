@@ -46,23 +46,16 @@
 		
 		<!-- Navbar -->
 		<div id="navbar">
-			<div id="navbar_hero_container">
-				<!-- Banner -->
-				<a class="unstyled" href="index.html">
-					<div id="navbar_hero_wrapper">
-						<div id="navbar_hero">lIterator</div>
-					</div>
-				</a>
+			<a id="navbar_hero" class="unstyled" href="index.html">lIterator</a>
 
-				<!-- Mobile menu button -->
-				<div id="mobile_navbar_menu_button" class="clickable" onclick="toggleNavbarMenu();">
-					<img src="Assets/Images/Icons/menu.svg" alt="Menu">
-				</div>
+			<!-- Mobile menu button -->
+			<div id="mobile_navbar_menu_button" class="clickable" onclick="toggleNavbarMenu();">
+				<img src="Assets/Images/Icons/menu.svg" alt="Menu">
 			</div>
 	
 			<!-- Links -->
-			<div id="navbar_menu_wrapper">
-				<div id="navbar_menu">
+			<div id="navbar_menu_wrapper" class="unselectable">
+				<div id="navbar_menu" class="flexbox">
 					<div class="clickable navbar-button">
 						<img class="navbar-button-icon" src="Assets/Images/Icons/profile.svg" alt="Profile">
 						<span>Profile</span>
@@ -105,7 +98,7 @@
 				</div>
 
 				<!-- Toolbar -->
-				<div id="toolbar">
+				<div id="toolbar" class="unselectable">
 					<div class="clickable toolbar-button" onclick="scrollToTop();">
 						<img class="clickable toolbar-button-icon" src="Assets/Images/Icons/top.svg" alt="Scroll Top">
 						<div class="hidden-text"><span>Top.</span></div>
@@ -134,7 +127,7 @@
 			
 			<!-- Story previews -->
 			<div id="main_content">
-				<div id="story_preview_list" class="comfortable-spacing column flexbox">
+				<div id="story_preview_list" class="column flexbox">
 					<a class="unstyled" href="story.html">
 						<div class="story preview card">
 							<div class="header">
