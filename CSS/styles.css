@@ -351,7 +351,7 @@ img { display: block; }
 	flex: 0 0 20em;
 	position: sticky;
 	align-self: flex-start;
-	background: repeating-linear-gradient(45deg, var(--light-border) 0px, var(--light-border) 5px, transparent 5px, transparent 11px);
+	background: repeating-linear-gradient(45deg, var(--light-border) 0px, var(--light-border) 4px, transparent 4px, transparent 10px);
 }}
 
 @media only screen and (max-width: 1400px) {#bulletin_wrapper {
