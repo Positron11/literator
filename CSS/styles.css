@@ -370,14 +370,11 @@ img { display: block; }
 	padding: 5em;
 	margin: 0 10vw;
 	max-width: 500px;
-	max-height: 75vh;
+	max-height: 70vh;
 	border-radius: 0.25em;
 	box-shadow: 0 0 20px 10px rgba(34,34,34,0.3);	
 }}
-@media only screen and (max-width: 500px) {#bulletin {
-	padding: 4em;
-	max-height: 80vh;
-}}
+@media only screen and (max-width: 500px) {#bulletin { padding: 4em; }}
 
 #bulletin_content_wrapper {
 	display: flex;
