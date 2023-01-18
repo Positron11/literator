@@ -150,9 +150,6 @@ a.unstyled {
 	width: 0;
 	overflow: hidden;
 }
-@media only screen and (max-width: 700px) {#navbar:not(.stuck) #navbar_hero_wrapper {
-	height: 5em;
-}}
 
 #navbar_hero {
 	width: 100%;
@@ -230,7 +227,8 @@ a.unstyled {
 
 #mobile_navbar_menu_button {
 	width: 1em;
-	padding: 0 2em;
+	padding: 2.5em;
+	align-self: center;
 	background-color: black;
 	grid-area: mobile-navbar-menu-button;
 }
@@ -238,7 +236,9 @@ a.unstyled {
 	display: none;
 }}
 @media only screen and (max-width: 700px) {#navbar:not(.stuck) #mobile_navbar_menu_button {
-	transform: translate(calc(-50vw + 50%), 0px);
+	padding: 1.5em;
+	border-radius: 0.5em;
+	transform: translate(calc(-50vw + 50%), 0px) scale(0.9);
 }}
 
 
