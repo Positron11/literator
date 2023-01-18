@@ -16,7 +16,7 @@ Array.from(storyPreviewBackgrounds).forEach(background => {
 	getBrightness(path, (b) => {
 		// define scales
 		x0 = 0, x1 = 255;
-		y0 = 0.1, y1 = 0.3;
+		y0 = 0.1, y1 = 0.2;
 
 		// map linear scale to ogarithmic scale
 		y = Math.exp(((b-x0)/(x1-x0)) * (Math.log(y1) - Math.log(y0)) + Math.log(y0));

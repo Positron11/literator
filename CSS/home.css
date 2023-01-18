@@ -71,3 +71,7 @@
 	background-color: rgba(0,0,0,0.05);
 	border-radius: var(--small-border-radius);
 }
+
+#story_previews .story .content {
+	text-shadow: 0 0 1em white;
+}
