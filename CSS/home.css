@@ -6,6 +6,7 @@
 
 @media only screen and (max-width: 1500px) {#story_previews .story * {
 	text-align: center;
+	justify-content: center;
 }}
 
 #story_previews .story .header {
@@ -13,10 +14,6 @@
 	row-gap: 1.5em;
 	flex-direction: column;
 }
-
-@media only screen and (max-width: 1500px) {#story_previews .story * {
-	justify-content: center;
-}}
 
 #story_previews .story .header .story-info {
 	display: flex;
