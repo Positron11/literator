@@ -124,7 +124,7 @@ a.unstyled {
 
 #navbar {
 	top: -1px;
-	z-index: 1;
+	z-index: 2;
 	display: grid;
 	position: sticky;
 	align-items: stretch;

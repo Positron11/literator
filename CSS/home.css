@@ -1,9 +1,50 @@
 /* STORY PREVIEWS */
 
+/* Story Separators */
+
 #story_previews > *:not(:last-child) {
 	border-bottom: 1px solid var(--light-gray);
 }
 
+/* Stories */
+
+#story_previews .story {
+	position: relative;
+}
+
+/* Background Images */
+
+#story_previews .story .background-image {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	z-index: 0;
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0 0 5em 5em white inset;
+	transition: opacity 0.3s ease;
+}
+
+/* Background Image Scroll Wiper */
+
+#story_previews .story .background-image .wiper {
+	top: 5em;
+	left: 0;
+	right: 0;
+	height: 0;
+	position: sticky;
+	box-shadow: 0 0 5em 6em white;
+}
+
+/* Story Preview Elements */
+
+#story_previews .story * {
+	z-index: 1;
+	position: relative;
+}
 @media only screen and (max-width: 1500px) {#story_previews .story * {
 	text-align: center;
 	justify-content: center;
