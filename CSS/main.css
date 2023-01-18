@@ -9,6 +9,9 @@
 	/* Colors */
 	--light-gray: #EEEEEE;
 	--lighter-gray: #F2F2F2;
+
+	/* Measurements */
+	--small-border-radius: 0.375rem;
 }
 
 
