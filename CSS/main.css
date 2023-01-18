@@ -66,7 +66,7 @@ a.unstyled {
 /* CARDS */
 
 .card {
-	padding: 5em;
+	padding: 4.5em;
 }
 @media only screen and (max-width: 700px) {.card {
 	padding: 3.5em;
@@ -81,8 +81,9 @@ a.unstyled {
 
 #page {
 	margin: auto;
-	padding: 2em 0;
-	max-width: 2000px;
+	max-width: 1500px;
+	box-sizing: border-box;
+	background-color: white;
 }
 @media only screen and (max-width: 700px) {#page {
 	font-size: 0.9em;
@@ -92,8 +93,10 @@ a.unstyled {
 /* PAGE HERO */
 
 #hero {
+	color: white;
 	padding: 3em 0;
 	text-align: center;
+	background-color: black;
 }
 @media only screen and (max-width: 1500px) {#hero {
 	font-size: 0.9em;
@@ -179,7 +182,7 @@ a.unstyled {
 	display: flex;
 }
 @media only screen and (min-width: calc(700px + 1px)) {#navbar_menu {
-	width: 25em;
+	width: 21em;
 }}
 @media only screen and (max-width: 700px) {#navbar_menu {
 	width: 100%;
@@ -243,7 +246,7 @@ a.unstyled {
 
 #bulletin {
 	display: flex;
-	flex: 0 0 25em;
+	flex: 0 0 21em;
 	position: sticky;
 	top: calc(6em - 1px);
 	flex-direction: column;
