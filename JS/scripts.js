@@ -2,6 +2,7 @@
 const navbar = document.getElementById("navbar");
 const main = document.getElementById("main");
 const bulletin = document.getElementById("bulletin");
+const bulletinContent = document.getElementById("bulletin_content");
 
 // initialization
 resizeBulletin();
@@ -13,6 +14,9 @@ stickyObserver.observe(navbar);
 // window event listeners
 window.addEventListener("scroll", () => {resizeBulletin();});
 window.addEventListener("resize", () => {resizeBulletin()});
+
+// bulletin scroll event listener
+bulletinContent.addEventListener("scroll", () => {bulletinScrollStatus(bulletinContent);});
 
 // dynamic bulletin height
 function resizeBulletin() {
@@ -26,4 +30,9 @@ function resizeBulletin() {
 // toggle mobile navbar menu
 function toggleNavbarMenu() {
 	navbar.classList.toggle("menu-open");
+}
+
+// sidebar scroll indicator
+function bulletinScrollStatus() {
+	bulletinContent.classList.toggle("fully-scrolled", (bulletinContent.scrollHeight - bulletinContent.scrollTop) < bulletinContent.clientHeight + 10);
 }
