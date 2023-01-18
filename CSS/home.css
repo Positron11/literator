@@ -26,10 +26,10 @@
 }
 
 #story_previews .story .header .story-info .pill {
-	font-weight: 500;
-	font-size: 0.75em;
+	font-weight: 600;
+	font-size: 0.7em;
 	padding: 0.5em 1em;
 	letter-spacing: 0.025em;
-	background-color: var(--lighter-gray);
+	background-color: rgba(0,0,0,0.05);
 	border-radius: var(--small-border-radius);
 }
