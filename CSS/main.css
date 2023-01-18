@@ -89,6 +89,10 @@ a.unstyled {
 	box-sizing: border-box;
 	background-color: white;
 }
+@media only screen and (min-width: calc(1500px + 1px)) {#page {
+	border-left: 1px solid var(--light-gray);
+	border-right: 1px solid var(--light-gray);
+}}
 @media only screen and (max-width: 700px) {#page {
 	font-size: 0.9em;
 }}
