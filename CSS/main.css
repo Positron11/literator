@@ -56,8 +56,10 @@ a.unstyled {
 .heading {
 	font-size: 3em;
 	font-weight: 450;
-	margin-top: -0.4em;
 	font-family: var(--display-font);
+}
+.heading:first-child {
+	margin-top: -0.4em;
 }
 @media only screen and (max-width: 1500px) {.heading {
 	font-size: 2.5em;
