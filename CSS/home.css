@@ -28,6 +28,10 @@
 	transition: opacity 0.3s ease;
 }
 
+@media only screen and (min-width: calc(1500px + 1px)) and (pointer: fine) {#story_previews .story:not(:hover) .background-image {
+	opacity: 0 !important;
+}}
+
 /* Background Image Scroll Wiper */
 
 #story_previews .story .background-image .wiper {
