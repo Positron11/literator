@@ -69,6 +69,27 @@ a.unstyled {
 }}
 
 
+/* CONTAINERS */
+
+.listbox {
+	display: flex;
+}
+
+.listbox.column {
+	flex-direction: column;
+}
+
+.listbox.minimal-spacing {
+	row-gap: 0.5em;
+	column-gap: 0.5em;
+}
+
+.listbox.compact-spacing {
+	row-gap: 1.5em;
+	column-gap: 1.5em;
+}
+
+
 /* CARDS */
 
 .card {
