@@ -234,7 +234,7 @@ h1:first-child {
 @media only screen and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-link:not(#navbar:not(.stuck) #navbar_menu .navbar-link:first-child) {
 	box-shadow: 1px 0 0 var(--light-gray) inset;
 }}
-@media only screen and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-link:hover {
+@media only screen and (min-width: calc(700px + 1px)) and (pointer: fine) {#navbar_menu .navbar-link:hover {
 	color: white;
 	box-shadow: none;
 	background-color: var(--black);
