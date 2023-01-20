@@ -22,6 +22,7 @@
 	opacity: 0;
 	z-index: 0;
 	position: absolute;
+	filter: grayscale();
 	background-size: cover;
 	background-position: center;
 	box-shadow: 0 0 5em 5em white inset;
