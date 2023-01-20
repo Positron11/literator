@@ -7,6 +7,7 @@
 	--sans-serif-font: "Satoshi", sans-serif;
 
 	/* Colors */
+	--black: #111;
 	--light-gray: #EEEEEE;
 	--lighter-gray: #F2F2F2;
 
@@ -124,7 +125,7 @@ h1:first-child {
 	color: white;
 	padding: 3em 0;
 	text-align: center;
-	background-color: black;
+	background-color: var(--black);
 }
 @media only screen and (max-width: 1500px) {#hero {
 	font-size: 0.9em;
@@ -176,7 +177,7 @@ h1:first-child {
 	display: flex;
 	padding: 0 2em;
 	align-items: center;
-	background-color: black;
+	background-color: var(--black);
 }
 
 #navbar_hero span {
@@ -236,7 +237,7 @@ h1:first-child {
 @media only screen and (min-width: calc(700px + 1px)) {#navbar_menu .navbar-link:hover {
 	color: white;
 	box-shadow: none;
-	background-color: black;
+	background-color: var(--black);
 }}
 
 #navbar_menu .navbar-link span {
@@ -252,7 +253,7 @@ h1:first-child {
 	width: 1em;
 	padding: 2.5em;
 	align-self: center;
-	background-color: black;
+	background-color: var(--black);
 	grid-area: mobile-navbar-menu-button;
 }
 @media only screen and (min-width: calc(700px + 1px)) {#mobile_navbar_menu_button {
