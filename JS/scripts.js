@@ -18,11 +18,8 @@ Array.from(storyPreviewBackgrounds).forEach(background => {
 		x0 = 0, x1 = 255;
 		y0 = 0.1, y1 = 0.2;
 
-		// map linear scale to ogarithmic scale
-		y = Math.exp(((b-x0)/(x1-x0)) * (Math.log(y1) - Math.log(y0)) + Math.log(y0));
-		
-		// set opacity
-		background.style.opacity = y;
+		// map linear scale to logarithmic scale and set opacity
+		background.style.opacity = Math.exp(((b-x0)/(x1-x0)) * (Math.log(y1) - Math.log(y0)) + Math.log(y0));
 	});
 });
 
