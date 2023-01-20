@@ -53,18 +53,19 @@ a.unstyled {
 	text-decoration: none;
 }
 
-.heading {
+h1 {
+	margin: 0;
 	font-size: 3em;
 	font-weight: 450;
 	font-family: var(--display-font);
 }
-.heading:first-child {
+h1:first-child {
 	margin-top: -0.4em;
 }
-@media only screen and (max-width: 1500px) {.heading {
+@media only screen and (max-width: 1500px) {h1 {
 	font-size: 2.5em;
 }}
-@media only screen and (max-width: 1500px) {.heading {
+@media only screen and (max-width: 1500px) {h1 {
 	font-size: 2.25em;
 }}
 
@@ -317,20 +318,13 @@ a.unstyled {
 /* FOOTER */
 
 #footer {
-	padding: 3em 0;
+	padding: 4em 0;
 	text-align: center;
+	color: var(--light-gray);
 	border-top: 1px solid var(--light-gray);
 }
 
-#footer_hero_heading {
-	color: var(--light-gray);
-	font-size: 3em;
-	font-weight: 400;
-	font-family: var(--display-font);
-}
-
 #footer_hero_subheading {
-	color: var(--light-gray);
 	font-size: 0.75em;
 	font-weight: 500;
 }
