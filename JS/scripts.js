@@ -39,6 +39,7 @@ window.addEventListener("resize", () => {
 	bulletinScrollStatus();
 });
 
+//omg test to push
 
 // bulletin scroll event listener
 bulletinContent.addEventListener("scroll", () => {bulletinScrollStatus();});
