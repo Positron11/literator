@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+
+/* FONT DEFINITONS */
+
+@font-face {
+	font-family: "Gentium Plus";
+	src: url("../public/fonts/Gentium/gentium_plus_regular.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 400;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+	font-family: "Melodrama";
+	src: url("../public/fonts/Melodrama/melodrama_variable.woff2") format("woff2-variations");
+	font-weight: 300 700;
+	font-stretch: 0% 200%;
+	font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+	font-family: "Satoshi";
+	src: url("../public/fonts/Satoshi/satoshi_variable.woff2") format("woff2-variations");
+	font-weight: 300 900;
+	font-stretch: 0% 200%;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Satoshi";
+	src: url("../public/fonts/Satoshi/satoshi_variable_italic.woff2") format("woff2-variations");
+	font-weight: 300 900;
+	font-stretch: 0% 200%;
+	font-style: italic;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+	font-family: "Karma";
+	src: url("../public/fonts/Karma/karma_variable.woff2") format("woff2-variations");
+	font-weight: 300 700;
+	font-stretch: 0% 200%;
+	font-style: normal;
 }
