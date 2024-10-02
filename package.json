@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "intersection-observer": "^0.12.2",
-    "react-intersection-observer": "^9.13.1"
-  }
-}
