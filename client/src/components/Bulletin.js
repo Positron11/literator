@@ -1,50 +1,61 @@
 // src/components/Bulletin.js
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 // import './Bulletin.css'; // split into own css file
 
 
 
 const Bulletin = () => {
-  const navbar = document.getElementById("navbar");
-  const main = document.getElementById("main");
-  const bulletin = document.getElementById("bulletin");
-  const bulletinContent = document.getElementById("bulletin_content");
+
+  const navRef = useRef(null);
+  const mainRef = useRef(null);
+  const bulletinRef = useRef(null);
+  const bulletinContentRef = useRef(null);
+
+  useEffect(() => {
+    const navbar = navRef.current;
+    const main = mainRef.current;
+    const bulletin = bulletinRef.current;
+    const bulletinContent = bulletinContentRef.current;
+    if (navbar && main && bulletin && bulletinContent){
+
+      // sidebar scroll indicator
+      function bulletinScrollStatus() {
+        bulletinContent.classList.toggle("fully-scrolled", (bulletinContent.scrollHeight - bulletinContent.scrollTop) < bulletinContent.clientHeight + 10);
+      }
+    
+      // dynamic bulletin height
+      function resizeBulletin() {
+        if (window.innerWidth > 10) {
+          var stopAtMainEnd = Math.max(0, window.innerHeight - main.getBoundingClientRect().bottom);
+          var distanceFromTop = window.innerHeight - (navbar.getBoundingClientRect().bottom);
+          bulletin.style.maxHeight = String(distanceFromTop - stopAtMainEnd) + "px";
+        } else {bulletin.style.maxHeight = null;}
+      }
+      
+      // window event listeners
+      window.addEventListener("scroll", () => {
+        resizeBulletin();
+        bulletinScrollStatus();
+      });
+      window.addEventListener("resize", () => {
+        resizeBulletin()
+        bulletinScrollStatus();
+      });
+        // bulletin scroll event listener
+        bulletinContent.addEventListener("scroll", () => {bulletinScrollStatus();});
+    }
+  },[]);
 
 
-  // // window event listeners
-  // window.addEventListener("scroll", () => {
-  //   resizeBulletin();
-  //   bulletinScrollStatus();
-  // });
-  // window.addEventListener("resize", () => {
-  //   resizeBulletin()
-  //   bulletinScrollStatus();
-  // });
 
-  // // bulletin scroll event listener
-  // bulletinContent.addEventListener("scroll", () => {bulletinScrollStatus();});
 
-  // // sidebar scroll indicator
-  // function bulletinScrollStatus() {
-  //   bulletinContent.classList.toggle("fully-scrolled", (bulletinContent.scrollHeight - bulletinContent.scrollTop) < bulletinContent.clientHeight + 10);
-  // }
-
-  // // dynamic bulletin height
-  // function resizeBulletin() {
-  //   if (window.innerWidth > 10) {
-  //     var stopAtMainEnd = Math.max(0, window.innerHeight - main.getBoundingClientRect().bottom);
-  //     var distanceFromTop = window.innerHeight - (navbar.getBoundingClientRect().bottom);
-  //     bulletin.style.maxHeight = String(distanceFromTop - stopAtMainEnd) + "px";
-  //   } else {bulletin.style.maxHeight = null;}
-  // }
-  
   return (
-    <aside className="compact-spacing column listbox card" id="bulletin">
+    <aside className="compact-spacing column listbox card" id="bulletin" ref={bulletinRef}>
       <div className="header" id="bulletin_header">
         <h1>News</h1>
       </div>
 
-      <div id="bulletin_content">
+      <div id="bulletin_content" ref={bulletinContentRef}>
         <p>Dark spruce forest frowned on either side of the frozen waterway.</p>
         <p>
           The trees had been stripped by a recent wind of their white covering
